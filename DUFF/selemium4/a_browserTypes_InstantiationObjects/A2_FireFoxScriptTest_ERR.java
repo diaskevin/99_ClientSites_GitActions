@@ -1,4 +1,4 @@
-package selemium4.a_browserTypes_InstantiationObjects;
+package ch01_selenium_general.Project_A_BrowserTypes.a_browserTypes_InstantiationObjects;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
