@@ -1,0 +1,40 @@
+package dave.versionOutput;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.hamcrest.MatcherAssert.assertThat;
+
+public class CapabilitiesChromeOptions_getVersion {
+    WebDriver driver;
+
+    @BeforeEach
+    public void setUp() throws Exception {
+        System.setProperty("webdriver.chrome.driver", "D:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions   .addArguments("--remote-allow-origins=*");
+        driver = new ChromeDriver(chromeOptions);
+
+        Capabilities caps = ((ChromeDriver) driver).getCapabilities();
+        String version = caps.getBrowserVersion();
+        System.out.println("Running ChromeDriver version: " + version);
+    }
+
+    @AfterEach
+    public void tearDown() throws Exception {
+        driver.quit();
+    }
+        @Test
+        public void workWithBasicAuthTest() {
+            driver.get("http://admin:admin@the-internet.herokuapp.com/basic_auth");
+            String pageMessage = driver.findElement(By.cssSelector("p")).getText();
+            MatcherAssert.assertThat(pageMessage, CoreMatchers.containsString("Congratulations!"));
+        }
+}
