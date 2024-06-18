@@ -1,4 +1,4 @@
-package ch03_selenium_javaDocs.doc_SEARCH_CONTENT.doc_WEBDRIVER.l_ScreenShot;
+package ch03_selenium_javaDocs.doc_SEARCH_CONTENT.doc_TAKE_SCREENSHOT.l_ScreenShot;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.BeforeEach;

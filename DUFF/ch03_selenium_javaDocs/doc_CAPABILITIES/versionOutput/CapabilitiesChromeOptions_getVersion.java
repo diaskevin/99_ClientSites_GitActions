@@ -1,4 +1,4 @@
-package dave.versionOutput;
+package ch03_selenium_javaDocs.doc_CAPABILITIES.versionOutput;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;

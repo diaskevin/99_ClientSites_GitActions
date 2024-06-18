@@ -1,4 +1,4 @@
-package ch03_selenium_javaDocs.doc_SEARCH_CONTENT.doc_WEBDRIVER.o_Select;
+package ch03_selenium_javaDocs.doc_SEARCH_CONTENT.doc_TAKE_SCREENSHOT.webElement.o_Select;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

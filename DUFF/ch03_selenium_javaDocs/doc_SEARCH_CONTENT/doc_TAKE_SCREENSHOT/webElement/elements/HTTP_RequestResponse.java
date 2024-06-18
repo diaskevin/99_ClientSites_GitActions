@@ -1,4 +1,4 @@
-package dave.elements;
+package ch03_selenium_javaDocs.doc_SEARCH_CONTENT.doc_TAKE_SCREENSHOT.webElement.elements;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;

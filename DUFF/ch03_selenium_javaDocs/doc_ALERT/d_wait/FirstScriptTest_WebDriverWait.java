@@ -1,6 +1,5 @@
-package ch03_selenium_javaDocs.doc_ALERT.d_wait;
-
-        import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
         import org.junit.jupiter.api.Test;
         import org.openqa.selenium.By;
         import org.openqa.selenium.WebDriver;
@@ -17,7 +16,7 @@ public class D1_FirstScriptTest_WebDriverWait {
 
 @BeforeEach
     public void setup() {
-        System.setProperty("webdriver.chrome.driver", "D:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         driver = new ChromeDriver();
     }
 

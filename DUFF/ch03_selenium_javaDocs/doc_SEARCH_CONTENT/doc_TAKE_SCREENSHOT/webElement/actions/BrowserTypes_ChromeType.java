@@ -1,4 +1,4 @@
-package dave.actions;
+package ch03_selenium_javaDocs.doc_SEARCH_CONTENT.doc_TAKE_SCREENSHOT.webElement.actions;
 
 import com.google.common.collect.ImmutableList;
 import org.junit.jupiter.api.AfterEach;

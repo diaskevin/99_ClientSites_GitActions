@@ -1,4 +1,4 @@
-package dave.windowsHandeling;
+package ch03_selenium_javaDocs.doc_SEARCH_CONTENT.doc_WEBDRIVER.doc_WINDOW.windowsHandeling;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;

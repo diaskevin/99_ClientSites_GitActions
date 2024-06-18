@@ -1,4 +1,4 @@
-package dave.chromeOption;
+package ch03_selenium_javaDocs.doc_CAPABILITIES.chromeOption;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
