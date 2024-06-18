@@ -1,20 +1,14 @@
-package ch03_selenium_javaDocs.doc_ALERT;
-
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-	public class Explicit_WebDriverWait_ExpectedCondition_a2_Test_CO {
+public class Explicit_WebDriverWait_ExpectedCondition_Test {
 		WebDriver driver;
 		@Test
 		public void explicitwait2() {
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\Rakesh\\Resource\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
 			driver = new ChromeDriver();
 
 
