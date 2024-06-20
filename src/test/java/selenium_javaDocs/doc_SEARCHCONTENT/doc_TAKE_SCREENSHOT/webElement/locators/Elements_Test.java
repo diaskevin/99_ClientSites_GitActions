@@ -11,7 +11,7 @@ import java.util.List;
 public class Elements_Test {
         @Test
         public void elements_test() {
-            System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
             WebDriver driver = new ChromeDriver();
 
             try {

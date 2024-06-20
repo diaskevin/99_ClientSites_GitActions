@@ -9,7 +9,7 @@ public class By_Id_Test {
     WebDriver driver;
     @Test
     public void by_Id_test() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://www.kcl.ac.uk/index.aspx");
         driver.findElement(By.id("courseSearchInput")).sendKeys("123ok");

@@ -23,7 +23,7 @@ public class BrowsingContext_Test {
     public void checkDesireCap() {
         ChromeOptions options = new ChromeOptions();
         options.setCapability("webSocketUrl", true);
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         driver = new ChromeDriver(options);
     }
     @Test

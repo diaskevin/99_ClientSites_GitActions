@@ -26,7 +26,7 @@ public class MouseHovers_1b_BY_Test {
 
     @BeforeEach
     public void setup() throws Exception {
-        System.setProperty("webdriver.chrome.driver",  "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver",  "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("--remote-allow-origins=*");
 		this.driver = new ChromeDriver(chromeOptions);

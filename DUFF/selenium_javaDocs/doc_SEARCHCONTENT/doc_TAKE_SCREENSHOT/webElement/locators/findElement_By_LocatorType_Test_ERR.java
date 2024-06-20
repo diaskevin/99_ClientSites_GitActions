@@ -11,7 +11,7 @@ public class findElement_By_LocatorType_Test_ERR {
     //ERR org.openqa.selenium.NoSuchElementException: no such element
     @Test
     public void LocatorTypes_Test() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         driver = new ChromeDriver();
         //Open Account Management Page >> Click on Create Account
         driver.get("http://sdettraining.com/trguitransactions/AccountManagement.aspx");

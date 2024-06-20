@@ -24,7 +24,7 @@ public class C2_Capabilities_HeadLess_Platforn_Edge_Test_ERR {
 		EdgeOptions options = new EdgeOptions();
 		options.setHeadless(true);
 		options = options.merge(capabilities);
-		System.setProperty("webdriver.edge.driver", "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+		System.setProperty("webdriver.edge.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
 		driver = new EdgeDriver(options);
 		System.out.println(driver.getCapabilities().asMap());
 		driver.get("https://www.selenium.dev/selenium/web/web-form.html");

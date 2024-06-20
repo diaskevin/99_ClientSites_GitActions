@@ -8,7 +8,7 @@ public class Ab_Navigation_Reference_ToBackForwardRefresh_Test_ERR {
     WebDriver driver;
     @Test
     public void navigationImport_dotmethod_test() {
-        System.setProperty("webdriver.chrome.driver",  "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver",  "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         driver = new ChromeDriver();
         WebDriver.Navigation nickyNackyDo = driver.navigate();
         nickyNackyDo.to("https://www.kcl.ac.uk/index.aspx");

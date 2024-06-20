@@ -9,7 +9,7 @@ public class findElement_By_RelativeLocators_Test_WIP {
 
     @Test
     public void relativeLocators_test() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.kcl.ac.uk/index.aspx");
         driver.findElement(By.id("courseSearchInput")).sendKeys("123ok");

@@ -12,7 +12,7 @@ public class Clear_Test {
     WebDriver driver;
     @Test
     public void verify_clear_test() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://google.com");
         driver.findElement(By.xpath("//*[@id=\"L2AGLb\"]")).click();

@@ -10,7 +10,7 @@ public class Select_Test {
 
     @Test
     public void select_test() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("http://jsbin.com/osebed/2");
         Select fruit = new Select(driver.findElement(By.id("fruits")));

@@ -17,7 +17,7 @@ public class Explicit_WebDriverWait_ExpectedCondition_Test_ERR {
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\Rakesh\\Resource\\chromedriver.exe");
 			driver = new ChromeDriver();
 
-			//System.setProperty("webdriver.chrome.driver",  "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+			//System.setProperty("webdriver.chrome.driver",  "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
 			//ChromeOptions chromeOptions = new ChromeOptions();
 			//chromeOptions.addArguments("--remote-allow-origins=*");
 			//driver = new ChromeDriver(chromeOptions);

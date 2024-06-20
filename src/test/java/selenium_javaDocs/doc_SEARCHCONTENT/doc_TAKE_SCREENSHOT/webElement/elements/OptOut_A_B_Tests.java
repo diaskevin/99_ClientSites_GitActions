@@ -18,7 +18,7 @@ public class OptOut_A_B_Tests {
     WebDriver driver;
     @BeforeEach
     public void setUp() throws Exception {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions   .addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(chromeOptions);

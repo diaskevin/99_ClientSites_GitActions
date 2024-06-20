@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class ActiveElement_Test {
 @Test
     public void activeElement_test() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         try {
             driver.get("http://www.google.com");

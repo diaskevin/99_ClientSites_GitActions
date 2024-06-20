@@ -12,7 +12,7 @@ WebDriver driver;
 	
 	@BeforeEach
 	public void setup() throws Exception {
-		System.setProperty("webdriver.chrome.driver",  "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver",  "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
 		driver = getChromeDriver();
 	}
 

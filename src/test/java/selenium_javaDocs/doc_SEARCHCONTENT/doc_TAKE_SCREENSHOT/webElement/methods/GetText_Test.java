@@ -9,7 +9,7 @@ public class GetText_Test {
     WebDriver driver;
     @Test
     public void geText_test() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://www.GMAIL.COM");
         String pageHeader = driver.findElement(By.tagName("h1")).getText();

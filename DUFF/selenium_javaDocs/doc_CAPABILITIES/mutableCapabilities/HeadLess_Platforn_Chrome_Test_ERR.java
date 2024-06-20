@@ -19,7 +19,7 @@ public class C1_Capabilities_HeadLess_Platforn_Chrome_Test_ERR {
 		ChromeOptions options = new ChromeOptions();
 		options.setHeadless(true);
 		//options = options.merge(capabilities);
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
 		driver = new ChromeDriver(options);
 		System.out.println(driver.getCapabilities().asMap());
 		driver.get("https://www.selenium.dev/selenium/web/web-form.html");

@@ -9,7 +9,7 @@ public class FindElement_Clear_Test {
     WebDriver driver;
     @Test
     public void clear_test() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://www.GMAIL.COM");
         driver.findElement(By.id("identifierId")).sendKeys("123ok");
