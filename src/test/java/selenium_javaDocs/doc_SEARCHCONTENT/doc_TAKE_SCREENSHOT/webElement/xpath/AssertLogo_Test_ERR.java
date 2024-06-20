@@ -11,35 +11,19 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
-
-public class AssertLogo_Test {
+public class AssertLogo_Test_ERR {
 WebDriver driver;
-	
-	@BeforeEach
-	public void setup() throws Exception {
-		System.setProperty("webdriver.chrome.driver",  "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
-		driver = getChromeDriver();
-	}
 
-	public WebDriver getChromeDriver_test() {
-		ChromeOptions chromeOptions = new ChromeOptions();
-		//chromeOptions.addArguments("--start-maximized");
-		chromeOptions.addArguments("--remote-allow-origins=*");
-		driver = new ChromeDriver(chromeOptions);
-		return driver;
-	}
-	
-	@AfterEach
-	public void tearDown() throws Exception {
-		driver.quit();
-	}
-	
 	@Test
 	public void testCheckboxDiscovery_test() throws InterruptedException {
-		driver.get("http://Amazon.com");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+		ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.addArguments("--remote-allow-origins=*");
+		this.driver = new ChromeDriver(chromeOptions);
+				driver.get("http://Amazon.com");
 		Thread.sleep(2000);
 		WebElement submit  = driver.findElement(By.xpath("//*[@id=\"nav-search-submit-button\"]"));
 		Assertions.assertTrue(submit.isDisplayed());
-		}
+		driver.quit();
+	}
 	}
