@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class FindElement_SendKeys_Test {
     @Test
-    public void sendKeys_Test() {
+    public void sendKeys_test() {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.GMAIL.COM");

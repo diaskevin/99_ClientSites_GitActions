@@ -31,7 +31,7 @@ public class Enabledlements_Test {
     }
 
     @Test
-    public void test() throws Exception {
+    public void enabled_test() throws Exception {
             driver.get("http://the-internet.herokuapp.com/dropdown");
             Select dropdown = new Select(driver.findElement(By.id("dropdown")));
             //MatcherAssert.assertThat(dropdown.getOptions().get(0).isEnabled(), Matchers.is(false));

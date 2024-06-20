@@ -34,7 +34,7 @@ public class CapabilitiesChromeOptions_getVersion_Test {
         driver.quit();
     }
         @Test
-        public void workWithBasicAuthTest() {
+        public void workWithBasicAuth_test() {
             driver.get("http://admin:admin@the-internet.herokuapp.com/basic_auth");
             String pageMessage = driver.findElement(By.cssSelector("p")).getText();
             MatcherAssert.assertThat(pageMessage, CoreMatchers.containsString("Congratulations!"));

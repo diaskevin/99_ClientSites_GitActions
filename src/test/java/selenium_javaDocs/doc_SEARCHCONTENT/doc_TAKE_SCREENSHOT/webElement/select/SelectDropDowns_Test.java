@@ -22,7 +22,7 @@ public class SelectDropDowns_Test {
     }
 
     @Test
-    public void select_Test() throws InterruptedException {
+    public void select_test() throws InterruptedException {
         driver.get("https://www.selenium.dev/selenium/web/formPage.html");
 
         WebElement selectElement = driver.findElement(By.name("selectomatic"));

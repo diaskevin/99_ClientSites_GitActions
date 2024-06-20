@@ -19,7 +19,7 @@ public class Frames_Test {
 // Once we've done that we're able to find the element we need, grab it's text, and assert that it's what we expect.
 // While this example helps illustrate the point of frame switching, it's not very practical.
     @Test
-    public void nestedFrames() throws Exception {
+    public void nestedFrames_test() throws Exception {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--remote-allow-origins=*");

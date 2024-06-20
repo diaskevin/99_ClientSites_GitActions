@@ -28,7 +28,7 @@ public class BiDirectional_LogInspector_Test extends Base {
     }
 
     @Test
-    void testListenToConsoleLog() throws ExecutionException, InterruptedException, TimeoutException {
+    void testListenToConsoleLog_test() throws ExecutionException, InterruptedException, TimeoutException {
         try (LogInspector logInspector = new LogInspector(driver)) {
             CompletableFuture<ConsoleLogEntry> future = new CompletableFuture<>();
             logInspector.onConsoleEntry(future::complete);
@@ -48,7 +48,7 @@ public class BiDirectional_LogInspector_Test extends Base {
     }
 
     @Test
-    void testListenToJavascriptLog()
+    void testListenToJavascriptLog_test()
             throws ExecutionException, InterruptedException, TimeoutException {
         try (LogInspector logInspector = new LogInspector(driver)) {
             CompletableFuture<JavascriptLogEntry> future = new CompletableFuture<>();
@@ -66,7 +66,7 @@ public class BiDirectional_LogInspector_Test extends Base {
     }
 
     @Test
-    void testListenToJavascriptErrorLog()
+    void testListenToJavascriptErrorLog_test()
             throws ExecutionException, InterruptedException, TimeoutException {
         try (LogInspector logInspector = new LogInspector(driver)) {
             CompletableFuture<JavascriptLogEntry> future = new CompletableFuture<>();
@@ -83,7 +83,7 @@ public class BiDirectional_LogInspector_Test extends Base {
     }
 
     @Test
-    void testRetrieveStacktraceForALog()
+    void testRetrieveStacktraceForALog_test()
             throws ExecutionException, InterruptedException, TimeoutException {
         try (LogInspector logInspector = new LogInspector(driver)) {
             CompletableFuture<JavascriptLogEntry> future = new CompletableFuture<>();
@@ -101,7 +101,7 @@ public class BiDirectional_LogInspector_Test extends Base {
     }
 
     @Test
-    void testListenToLogsWithMultipleConsumers()
+    void testListenToLogsWithMultipleConsumers_test()
             throws ExecutionException, InterruptedException, TimeoutException {
         try (LogInspector logInspector = new LogInspector(driver)) {
             CompletableFuture<JavascriptLogEntry> completableFuture1 = new CompletableFuture<>();

@@ -22,7 +22,7 @@ public class PrintScreen_Test {
     }
 
     @Test
-    public void screenshotPage() throws IOException {
+    public void screenshotPage_test() throws IOException {
 
         driver.get("https://www.selenium.dev");
         PrintsPage printer = (PrintsPage) driver;

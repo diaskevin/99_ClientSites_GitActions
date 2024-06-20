@@ -19,7 +19,7 @@ public class Logger_Test {
 
     Logger logger = Logger.getLogger("q_logging");
     @Test
-    public void googlesearch() throws InterruptedException {
+    public void googlesearch_test() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         ChromeDriver driver = new ChromeDriver();
         driver.get("https://google.com");
@@ -29,7 +29,7 @@ public class Logger_Test {
 
     }
     @Test
-    public void logging() throws IOException {
+    public void logging_test() throws IOException {
 
         logger.setLevel(Level.FINE);
         Arrays.stream(logger.getHandlers()).forEach(handler -> {

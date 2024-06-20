@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class Driver_getWindowHandle_Test {
 	WebDriver driver;
 	@Test
-	public void windowHandle() {
+	public void windowHandle_test() {
 		System.setProperty("webdriver.chrome.driver",  "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("--remote-allow-origins=*");

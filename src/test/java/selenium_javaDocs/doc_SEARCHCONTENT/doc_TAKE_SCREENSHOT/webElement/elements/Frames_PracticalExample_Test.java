@@ -34,7 +34,7 @@ public class Frames_PracticalExample_Test {
     }
 
     @Test
-    public void iFrames() throws Exception {
+    public void iFrames_test() throws Exception {
         driver.get("http://the-internet.herokuapp.com/tinymce");
         driver.switchTo().frame("mce_0_ifr");
         WebElement editor = driver.findElement(By.id("tinymce"));
@@ -43,7 +43,7 @@ public class Frames_PracticalExample_Test {
         editor.sendKeys("Hello World!");
         String afterText = editor.getText();
         MatcherAssert.assertThat(afterText, IsNot.not(CoreMatchers.equalTo((beforeText))));
-// switch back to top level
+        // switch back to top level
         driver.switchTo().defaultContent();
         ///html/body/div[2]/div/div/h3
         //assertThat(driver.findElement(By.cssSelector("u")).getText(),

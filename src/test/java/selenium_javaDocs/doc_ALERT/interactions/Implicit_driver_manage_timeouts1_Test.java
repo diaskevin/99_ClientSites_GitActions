@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 public class Implicit_driver_manage_timeouts1_Test {
 	WebDriver driver;
 	@Test
-	public void implicitWait1() throws InterruptedException {
+	public void implicitWait_test() throws InterruptedException {
 		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\Rakesh\\Resource\\chromedriver.exe");
 		//WebDriver driver = new ChromeDriver();
 		System.setProperty("webdriver.chrome.driver",  "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");

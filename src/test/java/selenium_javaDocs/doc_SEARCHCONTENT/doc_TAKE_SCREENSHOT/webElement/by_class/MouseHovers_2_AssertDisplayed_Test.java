@@ -38,7 +38,7 @@ public class MouseHovers_2_AssertDisplayed_Test {
     }
 
     @Test
-    public void hoversTest() {
+    public void hovers_test() {
         driver.get("http://the-internet.herokuapp.com/hovers");
 
         WebElement figure = driver.findElement(By.className("figure"));

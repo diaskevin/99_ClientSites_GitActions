@@ -30,8 +30,7 @@ WebDriver driver;
 	}
 	
 	@Test
-	public void testCheckboxDiscovery() throws InterruptedException {
-
+	public void open_test() throws InterruptedException {
 		driver.get("http://Amazon.com");
 		}
 	}

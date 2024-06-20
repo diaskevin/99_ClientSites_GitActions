@@ -28,7 +28,7 @@ public class Checkboxes_Test {
     }
 
     @Test
-    public void checkboxDiscoveryTest() {
+    public void checkboxDiscovery_test() {
         driver.get("http://the-internet.herokuapp.com/checkboxes");
         List<WebElement> checkboxes = driver.findElements(By.cssSelector("input[type='checkbox']"));
 

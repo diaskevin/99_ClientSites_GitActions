@@ -24,7 +24,7 @@ public class Alert_Test {
     }
 
     @Test
-    public void alertTest() throws InterruptedException {
+    public void alert_test() throws InterruptedException {
         //Click the link to activate the alert
 
         driver.get("https://www.selenium.dev/documentation/webdriver/interactions/alerts/");
@@ -44,7 +44,7 @@ public class Alert_Test {
     }
 
     @Test
-    public void alertConfirmTest() throws InterruptedException {
+    public void alertConfirm_test() throws InterruptedException {
         //Click the link to activate the alert
 
         driver.get("https://www.selenium.dev/documentation/webdriver/interactions/alerts/");
@@ -66,7 +66,7 @@ public class Alert_Test {
 
     @Disabled
     @Test
-    public void promptTest() throws InterruptedException {
+    public void prompt_test() throws InterruptedException {
         driver.get("https://www.selenium.dev/documentation/webdriver/interactions/alerts/");
         Thread.sleep(1000);
         //driver.findElement(By.linkText("See a sample prompt")).click();

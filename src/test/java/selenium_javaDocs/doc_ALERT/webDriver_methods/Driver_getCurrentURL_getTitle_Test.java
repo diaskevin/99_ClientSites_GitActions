@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class Driver_getCurrentURL_getTitle_Test {
 	WebDriver driver;
 	@Test
-	public void currentURL() {
+	public void currentURL_test() {
 
 		System.setProperty("webdriver.chrome.driver",  "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
 		ChromeOptions chromeOptions = new ChromeOptions();

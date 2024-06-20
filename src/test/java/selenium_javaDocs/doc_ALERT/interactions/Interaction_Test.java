@@ -19,7 +19,7 @@ public class Interaction_Test {
 
     //This Test Assertion fails and it continues to conduct the next test
     @Test
-    public void interact_Test() throws InterruptedException {
+    public void interact_test() throws InterruptedException {
     driver.get("https://www.selenium.dev/selenium/web/inputs.html");
     // Click on the element
     Thread.sleep(2000);
@@ -40,7 +40,7 @@ public class Interaction_Test {
 
     //This Test Assertion passes
     @Test
-    public void interact_Test2() throws InterruptedException {
+    public void interact_test2() throws InterruptedException {
         driver.get("https://www.selenium.dev/selenium/web/inputs.html");
         // Click on the element
         Thread.sleep(2000);

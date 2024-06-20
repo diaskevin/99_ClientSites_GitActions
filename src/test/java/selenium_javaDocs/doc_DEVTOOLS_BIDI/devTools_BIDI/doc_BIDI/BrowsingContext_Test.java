@@ -27,7 +27,7 @@ public class BrowsingContext_Test {
         driver = new ChromeDriver(options);
     }
     @Test
-    public void set_Header_token() throws InterruptedException {
+    public void set_Header_token_test() throws InterruptedException {
         String id = driver.getWindowHandle();
         System.out.println("Window handler value : "+id);
 

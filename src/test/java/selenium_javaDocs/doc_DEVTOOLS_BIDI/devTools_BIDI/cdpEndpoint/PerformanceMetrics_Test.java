@@ -18,7 +18,7 @@ public class PerformanceMetrics_Test {
         driver = new ChromeDriver();
     }
     @Test
-    public void set_performance() throws InterruptedException {
+    public void set_performance_test() throws InterruptedException {
         driver.get("https://www.google.com");
         //driver.get("https://www.bbc.co.uk");
 

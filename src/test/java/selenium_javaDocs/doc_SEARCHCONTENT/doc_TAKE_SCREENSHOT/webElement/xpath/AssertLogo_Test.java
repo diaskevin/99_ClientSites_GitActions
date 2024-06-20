@@ -22,7 +22,7 @@ WebDriver driver;
 		driver = getChromeDriver();
 	}
 
-	public WebDriver getChromeDriver() {
+	public WebDriver getChromeDriver_test() {
 		ChromeOptions chromeOptions = new ChromeOptions();
 		//chromeOptions.addArguments("--start-maximized");
 		chromeOptions.addArguments("--remote-allow-origins=*");
@@ -36,7 +36,7 @@ WebDriver driver;
 	}
 	
 	@Test
-	public void testCheckboxDiscovery() throws InterruptedException {
+	public void testCheckboxDiscovery_test() throws InterruptedException {
 		driver.get("http://Amazon.com");
 		Thread.sleep(2000);
 		WebElement submit  = driver.findElement(By.xpath("//*[@id=\"nav-search-submit-button\"]"));

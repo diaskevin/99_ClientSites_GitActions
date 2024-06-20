@@ -37,7 +37,7 @@ public class SelectDropdown_b_Test {
     // As an aside, in addition to selecting by text you can also select by value.
     // select.selectByValue("1");
         @Test
-        public void dropdownTestRedux() {
+        public void dropdown_test() {
             driver.get("http://the-internet.herokuapp.com/dropdown");
             Select selectList = new Select(driver.findElement(By.id("dropdown")));
             selectList.selectByVisibleText("Option 1");

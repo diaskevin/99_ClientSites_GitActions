@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class ProxyType_Test {
     @Test
-    public void proxy_Test() throws InterruptedException {
+    public void proxy_test() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
 
         //This is an example of how to access a proxy server if the test requires it at runtime in your environment

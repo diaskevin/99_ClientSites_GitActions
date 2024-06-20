@@ -20,7 +20,7 @@ public class ScreenShot_Test {
     }
 
     @Test
-    public void screenshotPage() throws IOException {
+    public void screenshotPage_test() throws IOException {
         driver.get("http://www.example.com");
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(scrFile, new File("./imagePage.png"));
@@ -28,7 +28,7 @@ public class ScreenShot_Test {
     }
 
     @Test
-    public void screenshotWebelement() throws IOException {
+    public void screenshotWebelement_test() throws IOException {
         //Take Screenshot of element
         driver.get("http://www.example.com");
         WebElement element = driver.findElement(By.cssSelector("h1"));

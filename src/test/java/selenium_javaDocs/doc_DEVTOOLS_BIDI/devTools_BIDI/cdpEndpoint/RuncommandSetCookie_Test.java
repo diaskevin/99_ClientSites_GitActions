@@ -20,7 +20,7 @@ public class RuncommandSetCookie_Test {
         driver = new ChromeDriver();
     }
     @Test
-    public void set_cookie() throws InterruptedException {
+    public void set_cookie_test() throws InterruptedException {
         driver.get("https://www.google.com");
 
         //Create a map with one cookie and its details

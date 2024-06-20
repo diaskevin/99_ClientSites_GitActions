@@ -22,7 +22,7 @@ public class FluentWait_Test {
         driver = new ChromeDriver();
     }
     @Test
-    public void eightComponents() {
+    public void eightComponents_test() {
         driver.get("https://www.selenium.dev/selenium/web/web-form.html");
         String title = driver.getTitle();
         Assertions.assertEquals("Web form", title);

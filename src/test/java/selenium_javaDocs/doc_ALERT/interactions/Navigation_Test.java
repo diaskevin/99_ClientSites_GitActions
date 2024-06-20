@@ -15,7 +15,7 @@ public class Navigation_Test {
     }
 
     @Test
-    public void nav_Test() throws InterruptedException {
+    public void nav_test() throws InterruptedException {
         driver.get("https://google.com");
         Thread.sleep(2000);
         driver.navigate().to("https://selenium.dev");

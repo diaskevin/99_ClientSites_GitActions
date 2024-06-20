@@ -30,7 +30,7 @@ public class OptOut_A_B_Tests {
     }
 
         @Test
-    public void WithCookieAfterVisitingPage() throws Exception {
+    public void WithCookieAfterVisitingPage_test() throws Exception {
             driver.get("http://the-internet.herokuapp.com/abtest");
             String headingText = driver.findElement(By.xpath("/html/body/div[2]/div/div/h3")).getText();
             MatcherAssert.assertThat(headingText, CoreMatchers.startsWith("A/B Test"));

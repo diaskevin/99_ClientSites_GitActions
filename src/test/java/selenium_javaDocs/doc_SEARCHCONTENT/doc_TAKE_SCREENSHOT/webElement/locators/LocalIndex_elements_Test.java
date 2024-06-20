@@ -19,7 +19,7 @@ public class LocalIndex_elements_Test {
 		driver = new ChromeDriver();
 	}
 	@Test
-	public void browser_chrome() throws InterruptedException {
+	public void browser_chrome_test() throws InterruptedException {
 		driver.get("C:\\Users\\Family\\Desktop\\Intellij\\02_B_Selenium4_framework\\src\\main\\java\\org\\example\\index.html");
 		Thread.sleep(2000);
 		//driver.findElement(By.name("newsletter"));

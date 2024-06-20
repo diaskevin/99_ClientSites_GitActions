@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class KeysEnter_Test {
     @Test
-    public void verify_keysEnter() throws InterruptedException {
+    public void verify_keysEnter_test() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://google.com");

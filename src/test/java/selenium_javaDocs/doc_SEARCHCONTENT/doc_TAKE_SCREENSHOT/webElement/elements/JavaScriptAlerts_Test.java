@@ -32,7 +32,7 @@ public class JavaScriptAlerts_Test {
     }
 
         @Test
-    public void JavaScriptAlertTest() throws Exception {
+    public void JavaScriptAlert_test() throws Exception {
         driver.get("http://the-internet.herokuapp.com/javascript_alerts");
         Thread.sleep(2000);
         driver.findElement(By.cssSelector(".example li:nth-child(2) button")).click();

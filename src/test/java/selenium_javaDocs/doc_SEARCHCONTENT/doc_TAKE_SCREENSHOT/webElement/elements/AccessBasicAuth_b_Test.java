@@ -33,7 +33,7 @@ public class AccessBasicAuth_b_Test {
     // enabling us to visit the page again without having to specify credentials.
     // This is particularly useful if you have numerous pages behind Basic Auth.
         @Test
-        public void workWithBasicAuthTest2() {
+        public void workWithBasicAuth_test() {
             driver.get("http://the-internet.herokuapp.com/basic_auth");
             String pageMessage = driver.findElement(By.cssSelector("p")).getText();
             MatcherAssert.assertThat(pageMessage, CoreMatchers.containsString("Congratulations!"));

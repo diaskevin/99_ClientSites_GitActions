@@ -11,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class Driver_manage_window_GetSet_PositionDimension_Test {
 	WebDriver driver;
 	@Test
-	public void window_position() {
+	public void window_position_test() {
 		System.setProperty("webdriver.chrome.driver",  "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("--remote-allow-origins=*");

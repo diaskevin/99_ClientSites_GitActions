@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class By_Id_Test {
     WebDriver driver;
     @Test
-    public void by_Id_Test() {
+    public void by_Id_test() {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://www.kcl.ac.uk/index.aspx");

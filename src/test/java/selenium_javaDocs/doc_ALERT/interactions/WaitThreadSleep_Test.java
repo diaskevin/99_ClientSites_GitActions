@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 public class WaitThreadSleep_Test {
 	WebDriver driver;
 	@Test
-	public void testManageWindow() {
+	public void testManageWindow_test() {
 		System.setProperty("webdriver.chrome.driver",  "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("--remote-allow-origins=*");

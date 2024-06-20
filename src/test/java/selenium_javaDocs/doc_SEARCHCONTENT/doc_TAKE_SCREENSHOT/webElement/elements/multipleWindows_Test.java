@@ -27,7 +27,7 @@ public class multipleWindows_Test {
 	// See resilient approach in next class for one that will work across all browsers
 
 	@Test
-	public void browser_chrome() {
+	public void browser_chrome_test() {
 		System.setProperty("webdriver.chrome.driver",  "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("--remote-allow-origins=*");

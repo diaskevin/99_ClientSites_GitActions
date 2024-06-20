@@ -68,7 +68,7 @@ public class BiDirectional_BrowserContent_Test extends Base  {
     }
 
     @Test
-    void testNavigateToAUrlWithReadinessState() {
+    void testNavigateToAUrlWithReadinessState_test() {
         BrowsingContext browsingContext = new BrowsingContext(driver, WindowType.TAB);
 
         NavigationResult info = browsingContext.navigate("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html",
@@ -80,7 +80,7 @@ public class BiDirectional_BrowserContent_Test extends Base  {
     }
 
     @Test
-    void testGetTreeWithAChild() {
+    void testGetTreeWithAChild_test() {
         String referenceContextId = driver.getWindowHandle();
         BrowsingContext parentWindow = new BrowsingContext(driver, referenceContextId);
 
@@ -96,7 +96,7 @@ public class BiDirectional_BrowserContent_Test extends Base  {
     }
 
     @Test
-    void testGetTreeWithDepth() {
+    void testGetTreeWithDepth_test() {
         String referenceContextId = driver.getWindowHandle();
         BrowsingContext parentWindow = new BrowsingContext(driver, referenceContextId);
 
@@ -111,7 +111,7 @@ public class BiDirectional_BrowserContent_Test extends Base  {
     }
 
     @Test
-    void testGetAllTopLevelContexts() {
+    void testGetAllTopLevelContexts_test() {
         BrowsingContext window1 = new BrowsingContext(driver, driver.getWindowHandle());
         BrowsingContext window2 = new BrowsingContext(driver, WindowType.WINDOW);
 
@@ -121,7 +121,7 @@ public class BiDirectional_BrowserContent_Test extends Base  {
     }
 
     @Test
-    void testCloseAWindow() {
+    void testCloseAWindow_test() {
         BrowsingContext window1 = new BrowsingContext(driver, WindowType.WINDOW);
         BrowsingContext window2 = new BrowsingContext(driver, WindowType.WINDOW);
 
@@ -131,7 +131,7 @@ public class BiDirectional_BrowserContent_Test extends Base  {
     }
 
     @Test
-    void testCloseATab() {
+    void testCloseATab_test() {
         BrowsingContext tab1 = new BrowsingContext(driver, WindowType.TAB);
         BrowsingContext tab2 = new BrowsingContext(driver, WindowType.TAB);
 

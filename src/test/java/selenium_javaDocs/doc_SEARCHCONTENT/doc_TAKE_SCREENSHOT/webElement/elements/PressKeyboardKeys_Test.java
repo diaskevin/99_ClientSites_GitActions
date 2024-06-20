@@ -31,7 +31,7 @@ public class PressKeyboardKeys_Test {
     }
 
         @Test
-    public void KeySpace() throws Exception {
+    public void KeySpace_test() throws Exception {
                 driver.get("http://the-internet.herokuapp.com/key_presses");
                 driver.findElement(By.id("target")).sendKeys(Keys.SPACE);
                 String txt = driver.findElement(By.id("result")).getText();

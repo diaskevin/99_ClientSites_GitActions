@@ -19,7 +19,7 @@ public class BasicAuthentication_Test {
         driver = new ChromeDriver();
     }
     @Test
-    public void set_Header_token() throws InterruptedException {
+    public void set_Header_token_test() throws InterruptedException {
         driver.get("https://www.google.com");
 
         //Create a map with

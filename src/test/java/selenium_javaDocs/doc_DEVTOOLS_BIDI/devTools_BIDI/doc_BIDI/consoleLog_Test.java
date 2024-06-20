@@ -28,7 +28,7 @@ public class consoleLog_Test {
         driver = new ChromeDriver(options);
     }
     @Test
-    public void consolelog() throws InterruptedException {
+    public void consolelog_test() throws InterruptedException {
             CopyOnWriteArrayList<ConsoleLogEntry> logs = new CopyOnWriteArrayList<>();
 
             try (LogInspector logInspector = new LogInspector(driver)) {

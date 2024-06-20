@@ -38,7 +38,7 @@ public class MouseHovers_1b_BY_Test {
     }
 
     @Test
-    public void hoversTest() {
+    public void hovers_test() {
         driver.get("http://the-internet.herokuapp.com/hovers");
 
         By figure = By.className("figure");

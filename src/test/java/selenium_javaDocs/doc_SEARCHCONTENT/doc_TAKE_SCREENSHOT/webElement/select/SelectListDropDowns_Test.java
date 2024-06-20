@@ -26,7 +26,7 @@ public class SelectListDropDowns_Test {
     }
 
     @Test
-    public void selectMultipleOptions_Test() throws InterruptedException {
+    public void selectMultipleOptions_test() throws InterruptedException {
         driver.get("https://www.selenium.dev/selenium/web/formPage.html");
 
         WebElement selectElement = driver.findElement(By.name("multi"));

@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 public class FileUpload_Test {
     @Test
-    public void fileUploadTest(){
+    public void fileUpload_test(){
        WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://the-internet.herokuapp.com/upload");

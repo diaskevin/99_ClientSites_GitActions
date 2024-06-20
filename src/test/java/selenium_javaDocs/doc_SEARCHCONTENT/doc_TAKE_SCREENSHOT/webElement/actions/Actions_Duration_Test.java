@@ -33,7 +33,7 @@ public class Actions_Duration_Test extends BaseChrome {
     }
 
     @Test
-    public void releasesAll() {
+    public void releasesAll_test() {
         driver.get("https://www.selenium.dev/selenium/web/mouse_interaction.html");
 
         WebElement clickable = driver.findElement(By.id("clickable"));

@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class AmazonAssert_Test {
 
     @Test
-    public void TestAlpha() {
+    public void TestAlpha_test() {
         WebDriver driver;
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
 

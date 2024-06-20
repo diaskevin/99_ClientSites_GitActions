@@ -19,7 +19,7 @@ public class CookiesStrictLax_Test {
     }
 
     @Test
-    public void cookies() throws InterruptedException {
+    public void cookiesStrict_test() throws InterruptedException {
         driver.get("http://www.example.com");
 
         Thread.sleep(1000);

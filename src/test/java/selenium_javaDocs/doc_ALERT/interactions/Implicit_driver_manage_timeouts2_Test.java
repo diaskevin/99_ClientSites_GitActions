@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 		WebDriver driver;
 		
 		@Test
-		public void ImplicitWait2() {
+		public void ImplicitWait2_test() {
 			//System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\Rakesh\\Resource\\chromedriver.exe");
 			//WebDriver driver = new ChromeDriver();
 			System.setProperty("webdriver.chrome.driver",  "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");

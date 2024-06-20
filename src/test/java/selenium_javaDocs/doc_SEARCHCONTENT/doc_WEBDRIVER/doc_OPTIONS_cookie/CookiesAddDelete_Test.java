@@ -17,7 +17,7 @@ public class CookiesAddDelete_Test {
     }
 
     @Test
-    public void cookies() throws InterruptedException {
+    public void cookies_test() throws InterruptedException {
         driver.get("http://www.example.com");
 
         Thread.sleep(1000);

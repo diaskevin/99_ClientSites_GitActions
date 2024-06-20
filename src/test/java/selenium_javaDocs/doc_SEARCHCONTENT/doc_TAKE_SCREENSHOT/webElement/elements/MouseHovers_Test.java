@@ -37,7 +37,7 @@ public class MouseHovers_Test {
     }
 
         @Test
-        public void hoversTest() throws Exception  {
+        public void hovers_test() throws Exception  {
             driver.get("http://the-internet.herokuapp.com/hovers");
             Thread.sleep(2000);
             WebElement avatar = driver.findElement(By.className("figure"));

@@ -54,7 +54,7 @@ public class VisuallyVerifyLocators_Test {
     }
 
         @Test
-            public void highlightElement() throws InterruptedException {
+            public void highlightElement_test() throws InterruptedException {
                 driver.get("http://the-internet.herokuapp.com/large");
                 WebElement element = driver.findElement(By.id("sibling-2.3"));
             highlightElement(element, 3);

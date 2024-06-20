@@ -31,7 +31,7 @@ public class JavaScriptExceptionsLog_Test {
         driver = new ChromeDriver(options);
     }
     @Test
-    public void jsErrorlog() throws InterruptedException {
+    public void jsErrorlog_test() throws InterruptedException {
         try (LogInspector logInspector = new LogInspector(driver)) {
         CompletableFuture<JavascriptLogEntry> future = new CompletableFuture<>();
         logInspector.onJavaScriptLog(future::complete);

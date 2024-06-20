@@ -34,7 +34,7 @@ public class MouseHovers_3_ancestors_Test {
     }
 
     @Test
-    public void hoversTest() throws InterruptedException {
+    public void hovers_test() throws InterruptedException {
         driver.get("http://the-internet.herokuapp.com/hovers");
 
         Thread.sleep(3000);

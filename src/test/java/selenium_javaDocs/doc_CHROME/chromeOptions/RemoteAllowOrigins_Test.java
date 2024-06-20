@@ -38,7 +38,7 @@ public class RemoteAllowOrigins_Test {
     }
 
     @Test
-    public void hoversTest() {
+    public void hovers_test() {
         driver.get("http://Amazon.com");
     }
 }

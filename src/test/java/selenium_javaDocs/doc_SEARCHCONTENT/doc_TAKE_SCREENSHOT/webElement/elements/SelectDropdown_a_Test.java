@@ -20,7 +20,7 @@ public class SelectDropdown_a_Test {
     WebDriver driver;
 
     @BeforeEach
-    public void setUpaa() throws Exception {
+    public void setUp() throws Exception {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions   .addArguments("--remote-allow-origins=*");
@@ -43,7 +43,7 @@ public class SelectDropdown_a_Test {
 //
 //While this works, the next class shows a simpler, built-in way to do this with Selenium
         @Test
-        public void dropdownTest() {
+        public void dropdown_test() {
             driver.get("http://the-internet.herokuapp.com/dropdown");
             WebElement dropdownList = driver.findElement(By.id("dropdown"));
             List<WebElement> options = dropdownList.findElements(By.tagName("option"));

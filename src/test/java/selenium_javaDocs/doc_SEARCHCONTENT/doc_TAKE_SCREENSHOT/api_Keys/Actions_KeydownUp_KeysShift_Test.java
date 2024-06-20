@@ -10,7 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 
 public class Actions_KeydownUp_KeysShift_Test {
     @Test
-    public void verify_keysShift() throws InterruptedException {
+    public void verify_keysShift_test() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://google.com");
