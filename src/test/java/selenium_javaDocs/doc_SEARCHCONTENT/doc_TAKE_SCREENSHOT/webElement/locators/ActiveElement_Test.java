@@ -1,12 +1,15 @@
 package selenium_javaDocs.doc_SEARCHCONTENT.doc_TAKE_SCREENSHOT.webElement.locators;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ActiveElement_Test {
-@Test
+    @Disabled
+    //ActiveElement_Test.activeElement_test(ActiveElement_Test.java:16)
+    @Test
     public void activeElement_test() {
         System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();

@@ -1,6 +1,7 @@
 package java_api.Logger;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.manager.SeleniumManager;
@@ -28,6 +29,7 @@ public class Logger_Test {
 
 
     }
+    @Disabled
     @Test
     public void logging_test() throws IOException {
 

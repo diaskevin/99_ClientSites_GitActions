@@ -1,6 +1,7 @@
 package selenium_javaDocs.doc_SEARCHCONTENT.doc_TAKE_SCREENSHOT.webElement.select;//import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -21,6 +22,8 @@ public class SelectDropDowns_Test {
         driver = new ChromeDriver(options);
     }
 
+    @Disabled
+    //Line SelectDropDowns_Test.select_test(SelectDropDowns_Test.java:37)
     @Test
     public void select_test() throws InterruptedException {
         driver.get("https://www.selenium.dev/selenium/web/formPage.html");

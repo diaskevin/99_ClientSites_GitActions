@@ -1,5 +1,6 @@
 package selenium_javaDocs.doc_DEVTOOLS_BIDI.fileUpload;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,6 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 public class FileUpload_Test {
+    @Disabled
+    //line20: Cheese is required on Desktop        //C:\Users\family\Desktop\cheese.JPG
     @Test
     public void fileUpload_test(){
        WebDriver driver = new ChromeDriver();

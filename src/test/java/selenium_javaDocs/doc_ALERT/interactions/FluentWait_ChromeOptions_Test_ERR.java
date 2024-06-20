@@ -17,13 +17,15 @@ public class FluentWait_ChromeOptions_Test_ERR {
     WebDriver driver;
 
     @Test
-    public void Search_Cheese() {
+    public void Search_Cheese() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver",  "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(chromeOptions);
 
             driver.get("https://google.com");
+            Thread.sleep(1000);
+            driver.findElement(By.xpath("//*[@id=\"L2AGLb\"]")).click();   //accept cookies
 
             //WebDriverWait wait = new WebDriverWait(driver,30);
             //wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[type = 'submit']")));
