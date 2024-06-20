@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2024-06-20T08:02:20.959586500Z</date>
+  <millis>1718870540959</millis>
+  <nanos>586500</nanos>
+  <sequence>0</sequence>
+  <logger>q_logging</logger>
+  <level>WARNING</level>
+  <class>q_logging</class>
+  <method>logging</method>
+  <thread>1</thread>
+  <message>this is a warning</message>
+</record>
+<record>
+  <date>2024-06-20T08:02:21.043535100Z</date>
+  <millis>1718870541043</millis>
+  <nanos>535100</nanos>
+  <sequence>1</sequence>
+  <logger>q_logging</logger>
+  <level>INFO</level>
+  <class>q_logging</class>
+  <method>logging</method>
+  <thread>1</thread>
+  <message>this is useful information</message>
+</record>
+<record>
+  <date>2024-06-20T08:02:21.044533300Z</date>
+  <millis>1718870541044</millis>
+  <nanos>533300</nanos>
+  <sequence>2</sequence>
+  <logger>q_logging</logger>
+  <level>FINE</level>
+  <class>q_logging</class>
+  <method>logging</method>
+  <thread>1</thread>
+  <message>this is detailed debug information</message>
+</record>
+</log>
