@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class fileUploadTesting_Test {
+public class FileUpload_Test {
     @Test
     public void fileUploadTest(){
        WebDriver driver = new ChromeDriver();

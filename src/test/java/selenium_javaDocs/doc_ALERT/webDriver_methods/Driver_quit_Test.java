@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class driver_quit_Test {
+public class Driver_quit_Test {
 	WebDriver driver;
 	@Test
 	public void quit() {

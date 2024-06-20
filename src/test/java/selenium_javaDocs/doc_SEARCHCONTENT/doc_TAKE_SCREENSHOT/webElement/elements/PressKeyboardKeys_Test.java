@@ -1,5 +1,7 @@
 package selenium_javaDocs.doc_SEARCHCONTENT.doc_TAKE_SCREENSHOT.webElement.elements;
 
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.core.Is;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -34,6 +36,6 @@ public class PressKeyboardKeys_Test {
                 driver.findElement(By.id("target")).sendKeys(Keys.SPACE);
                 String txt = driver.findElement(By.id("result")).getText();
                 System.out.println(txt);
-                MatcherAssert.assertThat(txt, Matchers.is("You entered: SPACE"));
+                MatcherAssert.assertThat(txt, Is.is("You entered: SPACE"));
     }
 }

@@ -1,5 +1,7 @@
 package selenium_javaDocs.doc_SEARCHCONTENT.doc_TAKE_SCREENSHOT.webElement.elements;
 
+import org.hamcrest.CoreMatchers;
+import org.hamcrest.MatcherAssert;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -35,6 +37,6 @@ public class OptOut_A_B_Tests {
             driver.manage().addCookie(new Cookie("optimizelyOptOut", "true"));
             driver.navigate().refresh();
             headingText = driver.findElement(By.xpath("/html/body/div[2]/div/div/h3")).getText();
-            MatcherAssert.assertThat(headingText, Matchers.is("No A/B Test"));
+            MatcherAssert.assertThat(headingText, CoreMatchers.is("No A/B Test"));
     }
 }

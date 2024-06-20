@@ -1,5 +1,7 @@
 package selenium_javaDocs.doc_SEARCHCONTENT.doc_TAKE_SCREENSHOT.webElement.elements;
 
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.core.Is;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -56,6 +58,6 @@ public class SelectDropdown_a_Test {
                     selectedOption = options.get(i).getText();
                 }
             }
-            MatcherAssert.assertThat(selectedOption, Matchers.is("Option 1"));
+            MatcherAssert.assertThat(selectedOption, Is.is("Option 1"));
         }
 }

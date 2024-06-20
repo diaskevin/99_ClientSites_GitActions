@@ -1,6 +1,9 @@
 package selenium_javaDocs.doc_SEARCHCONTENT.doc_TAKE_SCREENSHOT.webElement.elements;
 
 
+import org.hamcrest.CoreMatchers;
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.core.Is;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -34,9 +37,9 @@ public class multipleWindows_Test {
 		driver.findElement(By.cssSelector(".example a")).click();
 		Object[] allWindows = driver.getWindowHandles().toArray();
 		driver.switchTo().window(allWindows[0].toString());
-		MatcherAssert.assertThat(driver.getTitle(), Matchers.is(Matchers.not("New Window")));
+		MatcherAssert.assertThat(driver.getTitle(), Is.is(CoreMatchers.not("New Window")));
 		driver.switchTo().window(allWindows[1].toString());
-		MatcherAssert.assertThat(driver.getTitle(), Matchers.is("New Window"));
+		MatcherAssert.assertThat(driver.getTitle(), CoreMatchers.is("New Window"));
 		driver.quit();
 	}
 

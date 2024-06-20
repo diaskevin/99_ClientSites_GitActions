@@ -1,5 +1,8 @@
 package selenium_javaDocs.doc_SEARCHCONTENT.doc_WEBDRIVER.doc_WINDOW;
 
+import org.hamcrest.CoreMatchers;
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.core.Is;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +13,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
 
-public class MultipleWindows {
+public class MultipleWindows_Test {
 	WebDriver driver;
 
 	//After loading the page we click the link which spawns a new window.
@@ -33,9 +36,9 @@ public class MultipleWindows {
 		driver.findElement(By.cssSelector(".example a")).click();
 		Object[] allWindows = driver.getWindowHandles().toArray();
 		driver.switchTo().window(allWindows[0].toString());
-		MatcherAssert.assertThat(driver.getTitle(), Matchers.is(Matchers.not("New Window")));
+		MatcherAssert.assertThat(driver.getTitle(), Is.is(CoreMatchers.not("New Window")));
 		driver.switchTo().window(allWindows[1].toString());
-		MatcherAssert.assertThat(driver.getTitle(), Matchers.is("New Window"));
+		MatcherAssert.assertThat(driver.getTitle(), CoreMatchers.is("New Window"));
 		driver.quit();
 	}
 

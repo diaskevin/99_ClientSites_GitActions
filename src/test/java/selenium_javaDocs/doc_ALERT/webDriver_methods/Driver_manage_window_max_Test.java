@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class Driver_manage_window_max_Test_CO {
+public class Driver_manage_window_max_Test {
 	WebDriver driver;
 	@Test
 	public void window_max() throws InterruptedException {

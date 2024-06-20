@@ -20,7 +20,7 @@ public class Logger_Test {
     Logger logger = Logger.getLogger("q_logging");
     @Test
     public void googlesearch() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "D:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Family\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         ChromeDriver driver = new ChromeDriver();
         driver.get("https://google.com");
         Thread.sleep(4000);

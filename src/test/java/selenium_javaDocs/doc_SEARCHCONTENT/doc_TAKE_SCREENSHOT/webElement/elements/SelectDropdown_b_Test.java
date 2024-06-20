@@ -1,5 +1,8 @@
 package selenium_javaDocs.doc_SEARCHCONTENT.doc_TAKE_SCREENSHOT.webElement.elements;
 
+import org.hamcrest.CoreMatchers;
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.core.Is;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -38,6 +41,6 @@ public class SelectDropdown_b_Test {
             driver.get("http://the-internet.herokuapp.com/dropdown");
             Select selectList = new Select(driver.findElement(By.id("dropdown")));
             selectList.selectByVisibleText("Option 1");
-            MatcherAssert.assertThat(selectList.getFirstSelectedOption().getText(), Matchers.is(CoreMatchers.equalTo("Option 1")));
+            MatcherAssert.assertThat(selectList.getFirstSelectedOption().getText(), Is.is(CoreMatchers.equalTo("Option 1")));
         }
 }

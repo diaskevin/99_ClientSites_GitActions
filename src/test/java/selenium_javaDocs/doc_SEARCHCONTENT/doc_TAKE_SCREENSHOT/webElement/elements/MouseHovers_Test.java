@@ -1,5 +1,8 @@
 package selenium_javaDocs.doc_SEARCHCONTENT.doc_TAKE_SCREENSHOT.webElement.elements;
 
+import org.hamcrest.Matcher;
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.core.Is;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -43,6 +46,6 @@ public class MouseHovers_Test {
             builder.moveToElement(avatar).build().perform();
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(5000L));
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("figcaption")));
-            MatcherAssert.assertThat(driver.findElement(By.className("figcaption")).isDisplayed(), Matchers.is(Boolean.TRUE));
+            MatcherAssert.assertThat(driver.findElement(By.className("figcaption")).isDisplayed(), Is.is(Boolean.TRUE));
         }
 }

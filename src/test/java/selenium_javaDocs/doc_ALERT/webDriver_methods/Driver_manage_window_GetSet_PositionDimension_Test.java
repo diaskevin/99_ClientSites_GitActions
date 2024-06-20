@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class driver_manage_window_GetSet_PositionDimension_Test {
+public class Driver_manage_window_GetSet_PositionDimension_Test {
 	WebDriver driver;
 	@Test
 	public void window_position() {
