@@ -17,8 +17,6 @@ import java.util.function.Function;
 		
 		@BeforeEach
 	    public void fluentWait1() {
-	    	System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
-			driver = new ChromeDriver();
 			}
 		@Test
 		public void Search_Cheese_test() {
@@ -33,7 +31,7 @@ import java.util.function.Function;
 	    		       .withTimeout(Duration.ofSeconds(30))
 	    		       .pollingEvery(Duration.ofSeconds(5))
 	    		       .ignoring(NoSuchElementException.class);
-
+//ERR FluentWait.timeoutException
 	    		   WebElement foo = wait.until(new Function<WebDriver, WebElement>() {
 	    		     public WebElement apply(WebDriver driver) {
 	    		       return driver.findElement(By.id("foo"));
