@@ -17,7 +17,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
-public class BiDirectional_LogInspector_Test extends Base {
+public class BiDirectional_LogInspector_Test extends Base_utility {
 
 
     @BeforeEach

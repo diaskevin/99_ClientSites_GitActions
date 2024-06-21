@@ -32,10 +32,10 @@ public class AccessBasicAuth_b_Test {
     // This would have cached the Basic Auth session in the browser,
     // enabling us to visit the page again without having to specify credentials.
     // This is particularly useful if you have numerous pages behind Basic Auth.
-        @Test
-        public void workWithBasicAuth_test() {
-            driver.get("http://the-internet.herokuapp.com/basic_auth");
-            String pageMessage = driver.findElement(By.cssSelector("p")).getText();
-            MatcherAssert.assertThat(pageMessage, CoreMatchers.containsString("Congratulations!"));
+    @Test
+    public void workWithBasicAuth_test() {
+        driver.get("http://the-internet.herokuapp.com/basic_auth");
+        String pageMessage = driver.findElement(By.cssSelector("p")).getText();
+        MatcherAssert.assertThat(pageMessage, CoreMatchers.containsString("Congratulations!"));
         }
 }

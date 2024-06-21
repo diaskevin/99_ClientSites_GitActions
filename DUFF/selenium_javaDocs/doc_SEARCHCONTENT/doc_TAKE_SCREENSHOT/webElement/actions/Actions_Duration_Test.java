@@ -11,9 +11,9 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.time.Duration;
 
-public class Actions_Duration_Test extends BaseChrome {
+public class Actions_Duration_Test extends BaseChrome_utility {
     @Test
-    public void pause() {
+    public void pause_test() {
         driver.get("https://www.selenium.dev/selenium/web/mouse_interaction.html");
 
         long start = System.currentTimeMillis();

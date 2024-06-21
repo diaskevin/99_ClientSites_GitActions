@@ -11,7 +11,7 @@ import java.util.Set;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class MultipleWindows_ResilientApproach_ERR {
+public class MultipleWindows_ResilientApproach {
 	WebDriver driver;
 
 	// resilient approach for one that will work across all browsers
@@ -19,7 +19,7 @@ public class MultipleWindows_ResilientApproach_ERR {
 	//Now that we have two windows open we grab all of the window handles and search through them to find the new window handle (e.g., the handle that doesn't match the one we've already stored). We store the new window result in another variable (e.g., newWindow) and then switch between the windows, checking page title each time to make sure the correct window is in focus.
 
 	@Test
-	public void browser_chrome() {
+	public void browser_chrome_test() {
 		System.setProperty("webdriver.chrome.driver",  "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("--remote-allow-origins=*");

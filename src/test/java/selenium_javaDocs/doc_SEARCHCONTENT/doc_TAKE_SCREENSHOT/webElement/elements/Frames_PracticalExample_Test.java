@@ -21,7 +21,6 @@ import static org.hamcrest.core.IsNot.not;
 public class Frames_PracticalExample_Test {
     WebDriver driver;
 
-
     @BeforeEach
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");

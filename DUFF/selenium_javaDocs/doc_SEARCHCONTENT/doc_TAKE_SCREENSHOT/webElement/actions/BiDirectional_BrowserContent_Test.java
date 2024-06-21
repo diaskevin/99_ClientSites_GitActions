@@ -13,7 +13,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.util.List;
-public class BiDirectional_BrowserContent_Test extends Base  {
+public class BiDirectional_BrowserContent_Test extends Base_utility  {
     @BeforeEach
     public void setup() {
         FirefoxOptions options = new FirefoxOptions();
@@ -22,20 +22,20 @@ public class BiDirectional_BrowserContent_Test extends Base  {
     }
 
     @Test
-    void testCreateABrowsingContextForGivenId() {
+    void testCreateABrowsingContextForGivenId_test() {
         String id = driver.getWindowHandle();
         BrowsingContext browsingContext = new BrowsingContext(driver, id);
         Assertions.assertEquals(id, browsingContext.getId());
     }
 
     @Test
-    void testCreateAWindow() {
+    void testCreateAWindow_test() {
         BrowsingContext browsingContext = new BrowsingContext(driver, WindowType.WINDOW);
         Assertions.assertNotNull(browsingContext.getId());
     }
 
     @Test
-    void testCreateAWindowWithAReferenceContext() {
+    void testCreateAWindowWithAReferenceContext_test() {
         BrowsingContext
                 browsingContext =
                 new BrowsingContext(driver, WindowType.WINDOW, driver.getWindowHandle());
@@ -43,13 +43,13 @@ public class BiDirectional_BrowserContent_Test extends Base  {
     }
 
     @Test
-    void testCreateATab() {
+    void testCreateATab_test() {
         BrowsingContext browsingContext = new BrowsingContext(driver, WindowType.TAB);
         Assertions.assertNotNull(browsingContext.getId());
     }
 
     @Test
-    void testCreateATabWithAReferenceContext() {
+    void testCreateATabWithAReferenceContext_test() {
         BrowsingContext
                 browsingContext =
                 new BrowsingContext(driver, WindowType.TAB, driver.getWindowHandle());
@@ -57,7 +57,7 @@ public class BiDirectional_BrowserContent_Test extends Base  {
     }
 
     @Test
-    void testNavigateToAUrl() {
+    void testNavigateToAUrl_test() {
         BrowsingContext browsingContext = new BrowsingContext(driver, WindowType.TAB);
 
         NavigationResult info = browsingContext.navigate("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");

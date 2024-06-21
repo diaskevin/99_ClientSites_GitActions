@@ -6,10 +6,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
-public class S_SwitchToActiveElement_GetTitle_Test_ERR {
+public class S_SwitchToActiveElement_GetTitle_Test {
 	//ERR org.openqa.selenium.ElementNotInteractableException: element not interactable
 	@Test
-	public void SwitchTo() {
+	public void SwitchTo_test() {
 		System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
       
