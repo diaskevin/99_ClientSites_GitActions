@@ -20,15 +20,15 @@ import java.nio.file.Paths;
 import java.util.regex.Pattern;
 
 
-public class BrowserTypes_Chrome_Test {
+public class BrowserTypes_Chrome_Test extends BaseChrome_utility {
     private ChromeDriver driver;
     private File logLocation;
 
     @AfterEach
     public void quit() {
-        if (logLocation != null && logLocation.exists()) {
-            logLocation.delete();
-        }
+//        if (logLocation != null && logLocation.exists()) {
+//            logLocation.delete();
+//        }
 
         driver.quit();
     }
@@ -148,5 +148,7 @@ public class BrowserTypes_Chrome_Test {
         }
 
         return logLocation;
+
     }
+
 }

@@ -1,8 +1,10 @@
 package selenium_javaDocs.doc_SEARCHCONTEXT.doc_TAKE_SCREENSHOT.webElement.actions;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.bidi.BiDiException;
 import org.openqa.selenium.bidi.browsingcontext.BrowsingContext;
@@ -11,20 +13,17 @@ import org.openqa.selenium.bidi.browsingcontext.NavigationResult;
 import org.openqa.selenium.bidi.browsingcontext.ReadinessState;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.util.List;
-public class BiDirectional_BrowserContent_Test extends Base_utility  {
+public class BiDirectional_BrowserContent_Test {
+    WebDriver driver;
+
     @BeforeEach
     public void setup() {
+        System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
-        //FirefoxOptions options = new FirefoxOptions();
-
-        driver = new ChromeDriver(options);
-        //driver = new FirefoxDriver(options);
-
         options.setCapability("webSocketUrl", true);
+        driver = new ChromeDriver(options);
     }
 
     @Test
@@ -69,7 +68,7 @@ public class BiDirectional_BrowserContent_Test extends Base_utility  {
         NavigationResult info = browsingContext.navigate("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");
 
         Assertions.assertNotNull(browsingContext.getId());
-        Assertions.assertNull(info.getNavigationId());
+        Assertions.assertNotNull(info.getNavigationId());
         Assertions.assertTrue(info.getUrl().contains("/bidi/logEntryAdded.html"));
     }
 
@@ -81,7 +80,7 @@ public class BiDirectional_BrowserContent_Test extends Base_utility  {
                 ReadinessState.COMPLETE);
 
         Assertions.assertNotNull(browsingContext.getId());
-        Assertions.assertNull(info.getNavigationId());
+        Assertions.assertNotNull(info.getNavigationId());
         Assertions.assertTrue(info.getUrl().contains("/bidi/logEntryAdded.html"));
     }
 
@@ -145,4 +144,12 @@ public class BiDirectional_BrowserContent_Test extends Base_utility  {
 
         Assertions.assertThrows(BiDiException.class, tab2::getTree);
     }
+
+    @AfterEach
+    public void quit() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
+
 }

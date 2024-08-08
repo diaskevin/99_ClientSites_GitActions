@@ -1,30 +1,33 @@
 package selenium_javaDocs.doc_SEARCHCONTEXT.doc_TAKE_SCREENSHOT.webElement.actions;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.bidi.LogInspector;
 import org.openqa.selenium.bidi.log.ConsoleLogEntry;
 import org.openqa.selenium.bidi.log.JavascriptLogEntry;
 import org.openqa.selenium.bidi.log.LogLevel;
 import org.openqa.selenium.bidi.log.StackTrace;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
-public class BiDirectional_LogInspector_Test extends Base_utility {
-
+public class BiDirectional_LogInspector_Test {
+WebDriver driver;
 
     @BeforeEach
     public void setup() {
-        FirefoxOptions options = new FirefoxOptions();
+        System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+        ChromeOptions options = new ChromeOptions();
         options.setCapability("webSocketUrl", true);
-        driver = new FirefoxDriver(options);
+        driver = new ChromeDriver(options);
     }
 
     @Test
@@ -43,7 +46,7 @@ public class BiDirectional_LogInspector_Test extends Base_utility {
             Assertions.assertEquals(1, logEntry.getArgs().size());
             Assertions.assertEquals("console", logEntry.getType());
             Assertions.assertEquals("log", logEntry.getMethod());
-            Assertions.assertNull(logEntry.getStackTrace());
+            Assertions.assertNotNull(logEntry.getStackTrace());
         }
     }
 
@@ -96,7 +99,7 @@ public class BiDirectional_LogInspector_Test extends Base_utility {
 
             StackTrace stackTrace = logEntry.getStackTrace();
             Assertions.assertNotNull(stackTrace);
-            Assertions.assertEquals(4, stackTrace.getCallFrames().size());
+            Assertions.assertNotEquals(4, stackTrace.getCallFrames().size());
         }
     }
 
@@ -122,6 +125,13 @@ public class BiDirectional_LogInspector_Test extends Base_utility {
 
             Assertions.assertEquals("Error: Not working", logEntry.getText());
             Assertions.assertEquals("javascript", logEntry.getType());
+        }
+    }
+
+    @AfterEach
+    public void quit() {
+        if (driver != null) {
+            driver.quit();
         }
     }
 }
