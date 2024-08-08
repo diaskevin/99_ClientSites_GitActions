@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
-public class S_SwitchToActiveElement_GetTitle_Test {
+public class SwitchToActiveElement_GetTitle_Test_ERR {
 	//ERR org.openqa.selenium.ElementNotInteractableException: element not interactable
 	@Test
 	public void SwitchTo_test() {
@@ -15,13 +15,15 @@ public class S_SwitchToActiveElement_GetTitle_Test {
       
       	try {
         	driver.get("http://www.google.com");
+			Thread.sleep(2000);
         	driver.findElement(By.cssSelector("[name='q']")).sendKeys("webElement");
 
         	// Get attribute of current active element
         	String attr = driver.switchTo().activeElement().getAttribute("title");
         	System.out.println(attr);
-      		} 
-      	finally {
+      		} catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        } finally {
         driver.quit(); 
   		}      	
 	}
