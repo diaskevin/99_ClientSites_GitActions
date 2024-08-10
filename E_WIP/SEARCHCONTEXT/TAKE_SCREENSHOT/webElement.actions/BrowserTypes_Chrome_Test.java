@@ -24,6 +24,7 @@ public class BrowserTypes_Chrome_Test extends BaseChrome_utility {
     private ChromeDriver driver;
     private File logLocation;
 
+// For some reason the driver quit is not working
     @AfterEach
     public void quit() {
 //        if (logLocation != null && logLocation.exists()) {

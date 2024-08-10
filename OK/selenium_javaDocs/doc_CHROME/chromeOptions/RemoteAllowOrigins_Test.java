@@ -26,6 +26,7 @@ public class RemoteAllowOrigins_Test {
 
     @BeforeEach
     public void setup() {
+        //This fix was used to resolve the old Selenium3 problem caused by using the wrong selenium dependency on the POM
         System.setProperty("webdriver.chrome.driver",  "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("--remote-allow-origins=*");
