@@ -31,6 +31,6 @@ public class Explicit_WebDriverWait_ExpectedCondition_Test {
 
 			revealed.sendKeys("Displayed");
 			Assertions.assertEquals("Displayed", revealed.getDomProperty("value"));
-
+			driver.quit();
 		}
 	    }

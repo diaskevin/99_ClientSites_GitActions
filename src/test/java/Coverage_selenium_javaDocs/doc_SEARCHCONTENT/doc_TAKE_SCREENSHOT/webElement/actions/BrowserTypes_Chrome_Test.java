@@ -55,6 +55,7 @@ public class BrowserTypes_Chrome_Test extends BaseChrome_utility {
         driver = new ChromeDriver(options);
     }
 
+    @Test
     public void logsToFile() throws IOException {
         ChromeDriverService service = new ChromeDriverService.Builder()
                 .withLogFile(getLogLocation())

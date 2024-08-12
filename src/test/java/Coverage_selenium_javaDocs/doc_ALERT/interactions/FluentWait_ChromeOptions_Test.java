@@ -44,9 +44,6 @@ public class FluentWait_ChromeOptions_Test {
                });
 
             driver.findElement(By.name("q")).sendKeys("cheese" + Keys.ENTER);
-
-
-
                 String url = driver.getTitle();
                 System.out.println(url);
                 Assert.assertEquals("Title ok" ,"cheese - Google Search", url);

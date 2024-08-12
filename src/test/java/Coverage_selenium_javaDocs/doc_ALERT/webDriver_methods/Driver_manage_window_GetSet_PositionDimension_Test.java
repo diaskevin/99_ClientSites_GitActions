@@ -12,13 +12,9 @@ public class Driver_manage_window_GetSet_PositionDimension_Test {
 	WebDriver driver;
 	@Test
 	public void window_position_test() {
-		System.setProperty("webdriver.chrome.driver",  "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
-		ChromeOptions chromeOptions = new ChromeOptions();
-		chromeOptions.addArguments("--remote-allow-origins=*");
-		driver = new ChromeDriver(chromeOptions);
 
-	//System.setProperty("webdriver.chrome.driver",  "C:\\Users\\Family\\Desktop\\Rakesh\\Resource\\chromedriver.exe");
-	//WebDriver driver = new ChromeDriver();
+	System.setProperty("webdriver.chrome.driver",  "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+	WebDriver driver = new ChromeDriver();
 
 		driver.get("https://google.com");
 		//Access each dimension individually

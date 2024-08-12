@@ -12,10 +12,7 @@ public class AmazonAssert_Test {
     public void TestAlpha_test() {
         WebDriver driver;
         System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
-
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--remote-allow-origins=*");
-        driver = new ChromeDriver(chromeOptions);
+        driver = new ChromeDriver();
 
         driver.get("https://www.amazon.co.uk");
         String title = driver.getTitle();

@@ -42,5 +42,5 @@ public class JavaScriptAlerts_Test {
         popup.accept();
         String result = driver.findElement(By.id("result")).getText();
         MatcherAssert.assertThat(result, Matchers.is(CoreMatchers.equalTo("You clicked: Ok")));
-    }
+         }
 }

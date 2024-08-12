@@ -13,8 +13,6 @@ public class Explicit_WebDriverWait_ExpectedCondition_Test {
 			System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
 			driver = new ChromeDriver();
 
-
-
 			//System.setProperty("webdriver.chrome.driver",  "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
 			//ChromeOptions chromeOptions = new ChromeOptions();
 			//chromeOptions.addArguments("--remote-allow-origins=*");
