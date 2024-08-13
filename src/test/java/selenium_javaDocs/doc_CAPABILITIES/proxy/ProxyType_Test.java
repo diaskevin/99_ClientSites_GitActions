@@ -18,7 +18,7 @@ public class ProxyType_Test {
         options.setCapability("proxy", proxy);
         WebDriver driver = new ChromeDriver(options);
         driver.get("https://www.google.com/");
-        Thread.sleep(50000);
+        Thread.sleep(2000);
         driver.manage().window().maximize();
         driver.quit();
     }

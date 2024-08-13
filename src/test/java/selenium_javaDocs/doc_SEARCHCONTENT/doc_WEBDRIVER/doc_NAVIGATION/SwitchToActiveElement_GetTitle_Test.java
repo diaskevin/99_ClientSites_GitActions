@@ -26,7 +26,7 @@ public class SwitchToActiveElement_GetTitle_Test
       		} catch (InterruptedException e) {
             throw new RuntimeException(e);
         } finally {
-        //driver.quit();
+        driver.quit();
   		}      	
 	}
 }

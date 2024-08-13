@@ -21,9 +21,7 @@ public class CapabilitiesChromeOptions_getVersion_Test {
     public void setUp() throws Exception {
         System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions   .addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(chromeOptions);
-
         Capabilities caps = ((ChromeDriver) driver).getCapabilities();
         String version = caps.getBrowserVersion();
         System.out.println("Running ChromeDriver version: " + version);
