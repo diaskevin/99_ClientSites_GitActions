@@ -24,3 +24,4 @@ Verify Window with WebElement and getText.
 Verify WindowHandle WebElement and getText.
 Validate log SPLF.
 Validate log 4kj?.
+Chart progress with JavDocs
