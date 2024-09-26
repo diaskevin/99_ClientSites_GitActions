@@ -28,6 +28,7 @@ TIP WebDrivr class hierarchy:
    ChromiumDiver has child Classes below it       @ChromeDriver        @EdgeDriver
    
 
+
 WIP:
 Verify element with type By for xpath Id.
 Verify element with type By for xpath Name.
