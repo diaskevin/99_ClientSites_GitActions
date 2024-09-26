@@ -21,6 +21,13 @@ Validate run durations on multiple devices (HP_Laptop, Hp_Family, MAC).
 As a prelude to Ch03:
 Validate run of BrowserTypes on several machines.
 
+
+TIP WebDrivr class hierarchy: 
+   WedDriver, RemoteWebDriver, ChromiumDiver
+   ChromiumDiver has witin it a method called Capabilities()
+   ChromiumDiver has child Classes below it       @ChromeDriver        @EdgeDriver
+   
+
 WIP:
 Verify element with type By for xpath Id.
 Verify element with type By for xpath Name.
