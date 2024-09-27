@@ -54,9 +54,9 @@ Selenium inheritance note:
 		Click blue '@' in Documentation to see children classes of the current class
 		   VERIFY ChromiumDriver has a method within it called Capabilities() and that  
 		   VERIFY WedDriver with child RemoteWebDriver
-         VERIFY RemoteWebDriver with child ChromiumDiver
-         VERIFY ChromiumDiver with method Captbilities()
-		 VERIFY IntelliSense on a child class displays methods inherited up the chain from super classes above  
+         	   VERIFY RemoteWebDriver with child ChromiumDiver
+        	   VERIFY ChromiumDiver with method Captbilities()
+		   VERIFY IntelliSense on a child class displays methods inherited up the chain from super classes above  
 	
 WIP:
 VERIFY what are the affected child classes of 'Base Utility'
