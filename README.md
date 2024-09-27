@@ -13,11 +13,6 @@ VALIDATE run duration times on multiple devices (HP_Laptop, Hp_Family, MAC).
 As a prelude to Ch03:
 VALIDATE run of BrowserTypes on several machines.
 
-Deferred to Ch03:
-CONFIGURATION- For the use case of 'multiple Browser Types' running on one machine, can add a 'Base Utility' class to any cloned repo (See doc_SEARCHCONTENT.doc_TAKE_SCREENSHOT.webElement.actions)
-   VALIDATE Local Run of Repo ch02 across browsers (Chrome & Firefox) on one machine without a Base Utility, by manually changing Chrome to Firefox.
-   VALIDATE Local Run of Repo ch02 across browsers (Chrome & Firefox) on one machine with a Base Utility.
-
 
 Selenium inheritance note:
    WebDrive is an interface
