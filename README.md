@@ -35,7 +35,7 @@ Selenium inheritance note:
 						WebDriver driver;
 						ChromeOptions options = new ChromeOptions();
 						options.setMaxmizeWindow();
-						3) ChromeDriver CONSTRUCTOR 
+						3) ChromeDriver CONSTRUCTOR (See doc_CAPABILITIES/mutableCapabilities/SeleniumCapabilities_Test)
 						Capabilities cap;
 						cap = driver.getCapabilities();
 						String browser= cap.getBrowserName();
@@ -56,8 +56,8 @@ Selenium inheritance note:
 		   VERIFY WedDriver with child RemoteWebDriver
          VERIFY RemoteWebDriver with child ChromiumDiver
          VERIFY ChromiumDiver with method Captbilities()
-   					
-
+		 VERIFY IntelliSense on a child class displays methods inherited up the chain from super classes above  
+	
 WIP:
 VERIFY what are the affected child classes of 'Base Utility'
 VERIFY what class uses POM commons-io 2.15.1
