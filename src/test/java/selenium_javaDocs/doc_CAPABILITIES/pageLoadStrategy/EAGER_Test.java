@@ -1,26 +1,28 @@
+package selenium_javaDocs.doc_CAPABILITIES.pageLoadStrategy;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-public class NORMAL_Test {
+public class EAGER_Test {
     WebDriver driver;
 
     @BeforeEach
-    public void checkDesireCap() {
+    public void setup() {
         System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
-        driver = new ChromeDriver();
     }
 
     @Test
-    public void pageStrategyDefault_test() {
+    public void pageStrategyEager_test() throws InterruptedException {
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+        chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
         driver = new ChromeDriver(chromeOptions);
 
         try {
             driver.get("https://google.com");
+            Thread.sleep(1000);
         } finally {
             driver.quit();
         }
