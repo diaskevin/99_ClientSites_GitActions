@@ -1,4 +1,4 @@
-package selenium_javaDocs.doc_SEARCHCONTEXT.doc_TAKE_SCREENSHOT.webElement.elements;
+package selenium_javaDocs.doc_SEARCHCONTENT.doc_TAKE_SCREENSHOT.elements;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -48,13 +48,13 @@ public class HTTP_RequestResponse_Test {
 		driver.get("http://the-internet.herokuapp.com/download");
 		String link = driver.findElement(By.cssSelector(".example a:nth-of-type(1)")).getAttribute("href");
 
-		HttpClient httpClient =  HttpClientBuilder.create().build();
 		HttpHead request = new HttpHead(link);
+		HttpClient httpClient =  HttpClientBuilder.create().build();
 		HttpResponse response = httpClient.execute(request);
 		String contentType = response.getFirstHeader("Content-Type").getValue();
 		int contentLength = Integer.parseInt(response.getFirstHeader("Content-Length").getValue());
 
-		MatcherAssert.assertThat(contentType, Matchers.is("application/octet-stream"));
+		MatcherAssert.assertThat(contentType, Matchers.is("application/pdf"));
 		MatcherAssert.assertThat(contentLength, Matchers.is(Matchers.not(0)));
 
 		driver.quit();
