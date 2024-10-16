@@ -1,4 +1,4 @@
-package selenium_javaDocs.doc_SEARCHCONTENT.doc_TAKE_SCREENSHOT.elements;
+package selenium_javaDocs.doc_SEARCHCONTENT.doc_TAKE_SCREENSHOT.webElement_HHTP;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
