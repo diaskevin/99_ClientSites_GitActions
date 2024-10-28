@@ -29,6 +29,7 @@ public class Alert_Test {
 
         driver.get("https://www.selenium.dev/documentation/webdriver/interactions/alerts/");
         Thread.sleep(1000);
+        driver.manage().window().maximize();
         WebElement element = driver.findElement(By.linkText("See an example alert"));
         Thread.sleep(2000);
         System.out.println(element.getText());
@@ -48,7 +49,9 @@ public class Alert_Test {
         //Click the link to activate the alert
 
         driver.get("https://www.selenium.dev/documentation/webdriver/interactions/alerts/");
-        Thread.sleep(1000);
+        Thread.sleep(2000);
+        driver.manage().window().maximize();
+        Thread.sleep(2000);
         driver.findElement(By.linkText("See an example alert")).click();
         //Wait for the alert to be displayed and store it in a variable
         Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(2));
