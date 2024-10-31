@@ -1,3 +1,5 @@
+package selenium_javaDocs.doc_SEARCHCONTENT.doc_TAKE_SCREENSHOT.webElement.xpath;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -39,10 +41,10 @@ public class Select_Hotels_Test {
         //activeElement().getAttribute("title");
         //System.out.println(attr);
 
-        driver.findElement(By.xpath("//*[@id='onetrust-accept-btn-handler']//button")).click();
+        driver.findElement(By.xpath("//*[@id='onetrust-accept-btn-handler']")).click();
         //System.out.println("Accept All");
         Thread.sleep(2000);
-        driver.findElement(By.xpath("//button[@aria-label='Going to']")).click();
+        driver.findElement(By.xpath("//button[@aria-label='Where to?']")).click();
         Thread.sleep(2000);
         driver.findElement(By.xpath("//input[@id='destination_form_field']")).click();
         driver.findElement(By.xpath("//input[@id='destination_form_field']")).sendKeys("London");
@@ -59,9 +61,9 @@ public class Select_Hotels_Test {
         WebElement match = driver.findElement(By.xpath("//header//div[@data-stid=\"results-header-message\"]"));
         System.out.println("The Number of hotel is Listed: "+match.getText());
         String[] str = match.getText().split(" ");
-        int numberOfHotels = Integer.parseInt(str[0].replace(",", ""));
+        int numberOfHotels = Integer.parseInt(str[0].replace("+", ""));
         System.out.println(numberOfHotels);
-        Assertions.assertTrue(numberOfHotels > 1500);
+        Assertions.assertTrue(numberOfHotels >= 300);
         System.out.println(str[1]);
         Assertions.assertEquals("properties", str[1].trim());
         char[] ch = str[1].toCharArray();

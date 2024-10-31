@@ -1,4 +1,4 @@
-package selenium_javaDocs.doc_SEARCHCONTEXT.doc_SUPPORT;
+package selenium_javaDocs.doc_SUPPORT;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -43,8 +43,8 @@ Colour_notRunable_Test {
             //driver.get("https://www.selenium.dev/selenium/web/colorPage.html");
             driver.get("https://www.selenium.dev/selenium/web/login.html");
 
-            Color loginButtonColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("color"));
-            Color loginButtonBackgroundColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("background-color"));
+            Color loginButtonColour = Color.fromString(driver.findElement(By.id("login-form-submit")).getCssValue("color"));
+            Color loginButtonBackgroundColour = Color.fromString(driver.findElement(By.id("login-form-submit")).getCssValue("background-color"));
 
             //assert loginButtonBackgroundColour.equals(HOTPINK);
 
@@ -52,6 +52,6 @@ Colour_notRunable_Test {
             //assert loginButtonBackgroundColour.asRgba().equals("rgba(255, 105, 180, 1)");
             //assert loginButtonBackgroundColour.asRgb().equals("rgb(255, 105, 180)");
 
-            //driver.quit();
+            driver.quit();
         }
     }
