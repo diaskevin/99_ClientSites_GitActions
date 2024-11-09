@@ -1,4 +1,4 @@
-package selenium_javaDocs.doc_DEVTOOLS_BIDI.devTools_BIDI.doc_BIDI;
+package selenium.doc_DEVTOOLS_BIDI.devTools_BIDI.doc_BIDI;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

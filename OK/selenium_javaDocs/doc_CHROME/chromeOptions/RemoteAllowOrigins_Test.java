@@ -1,4 +1,4 @@
-package selenium_javaDocs.doc_CHROME.chromeOptions;
+package selenium.doc_CHROME.chromeOptions;
 
 import org.hamcrest.CoreMatchers;
 import org.hamcrest.MatcherAssert;

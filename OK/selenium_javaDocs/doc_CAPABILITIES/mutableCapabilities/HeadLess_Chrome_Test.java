@@ -1,4 +1,4 @@
-package selenium_javaDocs.doc_CAPABILITIES.mutableCapabilities;
+package selenium.Capabilities.mutableCapabilities;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

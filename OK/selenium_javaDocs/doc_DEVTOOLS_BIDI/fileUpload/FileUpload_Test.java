@@ -1,4 +1,4 @@
-package selenium_javaDocs.doc_DEVTOOLS_BIDI.fileUpload;
+package selenium.doc_DEVTOOLS_BIDI.fileUpload;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package selenium_javaDocs.doc_ALERT.interactions;//https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/support/ui/FluentWait.html#withTimeout(java.time.Duration)
+package selenium.Alert.interactions;//https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/support/ui/FluentWait.html#withTimeout(java.time.Duration)
 
 
 import org.junit.Assert;

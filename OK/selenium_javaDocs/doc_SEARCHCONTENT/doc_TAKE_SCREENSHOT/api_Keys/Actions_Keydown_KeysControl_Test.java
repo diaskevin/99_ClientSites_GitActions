@@ -1,4 +1,4 @@
-package selenium_javaDocs.doc_SEARCHCONTENT.doc_TAKE_SCREENSHOT.actioni_Keys;
+package selenium.doc_SEARCHCONTENT.doc_TAKE_SCREENSHOT.actioni_Keys;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;

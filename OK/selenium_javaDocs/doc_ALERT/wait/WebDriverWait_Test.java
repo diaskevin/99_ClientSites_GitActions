@@ -1,4 +1,4 @@
-package selenium_javaDocs.doc_ALERT.wait;
+package selenium.Alert.Wait;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

@@ -1,4 +1,4 @@
-package selenium_javaDocs.doc_SEARCHCONTEXT.doc_SUPPORT;
+package selenium.doc_SEARCHCONTEXT.doc_SUPPORT;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

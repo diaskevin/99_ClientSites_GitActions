@@ -1,4 +1,4 @@
-package selenium_javaDocs.doc_SEARCHCONTENT.doc_TAKE_SCREENSHOT.webElement.xpath;
+package selenium.doc_SEARCHCONTENT.doc_TAKE_SCREENSHOT.webElement.xpath;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

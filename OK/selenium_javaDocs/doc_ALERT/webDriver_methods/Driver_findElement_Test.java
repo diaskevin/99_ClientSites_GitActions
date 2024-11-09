@@ -1,4 +1,4 @@
-package selenium_javaDocs.doc_ALERT.webDriver_methods;
+package selenium.Alert.webDriver_methods;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;

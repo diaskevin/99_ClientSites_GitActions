@@ -1,4 +1,4 @@
-package selenium_javaDocs.doc_ALERT.interactions;
+package selenium.Alert.interactions;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;

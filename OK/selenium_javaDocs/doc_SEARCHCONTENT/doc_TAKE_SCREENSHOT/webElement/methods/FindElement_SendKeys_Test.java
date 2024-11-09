@@ -1,4 +1,4 @@
-package selenium_javaDocs.doc_SEARCHCONTENT.doc_TAKE_SCREENSHOT.webElement.methods;
+package selenium.doc_SEARCHCONTENT.doc_TAKE_SCREENSHOT.webElement.methods;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;

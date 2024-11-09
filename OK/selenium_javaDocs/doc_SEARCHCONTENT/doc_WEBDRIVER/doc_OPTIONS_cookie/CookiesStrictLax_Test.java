@@ -1,4 +1,4 @@
-package selenium_javaDocs.doc_SEARCHCONTENT.doc_WEBDRIVER.doc_OPTIONS_cookie;
+package selenium.doc_SEARCHCONTENT.doc_WEBDRIVER.doc_OPTIONS_cookie;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

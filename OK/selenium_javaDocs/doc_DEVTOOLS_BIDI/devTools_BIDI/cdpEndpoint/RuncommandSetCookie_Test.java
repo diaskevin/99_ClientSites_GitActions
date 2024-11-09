@@ -1,4 +1,4 @@
-package selenium_javaDocs.doc_DEVTOOLS_BIDI.devTools_BIDI.cdpEndpoint;
+package selenium.doc_DEVTOOLS_BIDI.devTools_BIDI.cdpEndpoint;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

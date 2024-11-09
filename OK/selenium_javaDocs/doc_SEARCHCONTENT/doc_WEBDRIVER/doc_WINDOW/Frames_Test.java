@@ -1,4 +1,4 @@
-package selenium_javaDocs.doc_SEARCHCONTENT.doc_WEBDRIVER.doc_WINDOW;
+package selenium.doc_SEARCHCONTENT.doc_WEBDRIVER.doc_WINDOW;
 
 import org.hamcrest.CoreMatchers;
 import org.hamcrest.MatcherAssert;

@@ -1,4 +1,4 @@
-package selenium_javaDocs.doc_CAPABILITIES.proxy;
+package selenium.Capabilities.proxy;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Proxy;

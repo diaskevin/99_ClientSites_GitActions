@@ -1,4 +1,4 @@
-package selenium_javaDocs.doc_SEARCHCONTENT.doc_TAKE_SCREENSHOT.webElement.actions;
+package selenium.doc_SEARCHCONTENT.doc_TAKE_SCREENSHOT.webElement.actions;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.chrome.ChromeDriver;

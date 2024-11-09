@@ -1,4 +1,4 @@
-package selenium_javaDocs.doc_CAPABILITIES.versionOutput;
+package selenium.Capabilities.versionOutput;
 
 import org.hamcrest.CoreMatchers;
 import org.hamcrest.MatcherAssert;

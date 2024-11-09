@@ -1,4 +1,4 @@
-package selenium_javaDocs.doc_SEARCHCONTENT.doc_TAKE_SCREENSHOT.webElement.elements;
+package selenium.doc_SEARCHCONTENT.doc_TAKE_SCREENSHOT.webElement.elements;
 
 import org.hamcrest.Matcher;
 import org.hamcrest.MatcherAssert;

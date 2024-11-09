@@ -1,4 +1,4 @@
-package selenium_javaDocs.doc_SEARCHCONTENT.doc_TAKE_SCREENSHOT.webElement.select;
+package selenium.doc_SEARCHCONTENT.doc_TAKE_SCREENSHOT.webElement.select;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

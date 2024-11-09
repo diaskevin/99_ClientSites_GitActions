@@ -1,4 +1,4 @@
-package selenium_javaDocs.doc_SEARCHCONTEXT.doc_SUPPORT;
+package selenium.doc_SEARCHCONTEXT.doc_SUPPORT;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;

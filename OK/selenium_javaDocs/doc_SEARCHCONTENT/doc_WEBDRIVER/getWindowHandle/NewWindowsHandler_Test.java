@@ -1,4 +1,4 @@
-package selenium_javaDocs.doc_SEARCHCONTENT.doc_WEBDRIVER.getWindowHandle;
+package selenium.doc_SEARCHCONTENT.doc_WEBDRIVER.getWindowHandle;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.BeforeEach;
