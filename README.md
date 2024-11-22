@@ -2,6 +2,11 @@
 The aim of this project is to provide Automation Testing of the packages provided by the Selenium 4 api as defined by Java docs: 
 https://www.javadoc.io/doc/org.seleniumhq.selenium/selenium-api/2.50.1/overview-summary.html
 
+Three Projects:
+MySelenium_featureExamples
+MySelenium_JavaDocsCoverage
+MyScratchPad GoogleTest
+
 ## Convention
 See Chapter01 Readme (Globally declare WebDriver with @Before constructor for Driver Type). 
 
