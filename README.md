@@ -5,7 +5,7 @@ https://www.javadoc.io/doc/org.seleniumhq.selenium/selenium-api/2.50.1/overview-
 Three Projects:
 MySelenium_featureExamples
 MySelenium_JavaDocsCoverage
-MyScratchPad GoogleTest
+MyScratchPad GoogleTest AmazonCOM_Test AmazonUK_Test DIY_Test
 
 ## Convention
 See Chapter01 Readme (Globally declare WebDriver with @Before constructor for Driver Type). 
