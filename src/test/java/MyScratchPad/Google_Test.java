@@ -9,18 +9,18 @@ import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-public class GoogleTest {
+public class Google_Test {
     WebDriver driver;
     // Add @BeforeAll (static) & @AfterAll (static) and static WebDriver driver;
      @Test
-    public void title_test(){
+    public void title_test() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://google.co.uk");
         String title = driver.getTitle();
         System.out.println("Title: " + title);
         assertEquals(title, "Google");
-        driver.findElement(By.xpath("//*[@id=\"L2AGLb\"]")).click();
+        //driver.findElement(By.xpath("//*[@id=\"L2AGLb\"]")).click();
         driver.quit();
     }
     @Test
@@ -42,10 +42,22 @@ public class GoogleTest {
         driver.findElement(By.xpath("//*[@id=\"L2AGLb\"]")).click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        //Add assert@ q is displayed
+
+        //assert search is displayed
         boolean searchDisplayed = driver.findElement(By.name("q")).isDisplayed();
         System.out.println("Search element is displayed: " +searchDisplayed);
         Assertions.assertTrue(searchDisplayed);
+
+        //assert Index page URL
+        String indexURL = driver.getCurrentUrl();
+        System.out.print("Index URL: " +indexURL);
+        assertEquals("https://www.google.co.uk/", indexURL);
+
+        //assert Index page title text
+        String indexTitle = driver.getTitle();
+        System.out.println("\nIndex Title: " +indexTitle);
+        assertEquals("Google", indexTitle);
+
         driver.quit();
     }
 
