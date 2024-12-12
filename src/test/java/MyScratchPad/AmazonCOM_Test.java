@@ -2,7 +2,7 @@ package MyScratchPad;
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,18 +11,23 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class AmazonCOM_Test {
 	WebDriver driver;
-	
-	@Before
+
+
+	@BeforeEach
     public void setup() throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.get("https://amazon.com");	
-	}
-	
+		driver.get("https://amazon.com");
+		Thread.sleep(10000);
+		//     !!!!!     OBSERVE: MANUAL INPUT CAPTCHA     !!!!!
+		//     !!!!!     DISABLED TESTS                    !!!!!
+		}
+
+	@Disabled
 	@Test
-	public void SearchFirstitemTest() throws InterruptedException {
+	public void SearchFirstitemTestJunit5() throws InterruptedException {
 		Thread.sleep(1000);
-	        	//Step 03: Enter "IPhone 11" in Edit Box 
+	        	//Step 03: Enter "IPhone 11" in Edit Box
 				driver.findElement(By.id("twotabsearchtextbox")).sendKeys("IPhone 11");
 				//Step 04: Click on Search Button
 				driver.findElement(By.id("nav-search-submit-button")).click();
@@ -30,7 +35,8 @@ public class AmazonCOM_Test {
 				//driver.findElement(By.xpath("//*[@id=\"sp-cc-accept\"]")).click();
 				System.out.println("First Search");
 	}
-	
+
+	@Disabled
 	@Test
 	public void SearchSeconditemTest() throws InterruptedException {
 		Thread.sleep(1000);
@@ -43,7 +49,7 @@ public class AmazonCOM_Test {
 				System.out.println("Second Search");
 	}
 	
-	@After       	
+	@AfterEach
      public void teardown() {
             	driver.quit();
         		}
