@@ -1,16 +1,15 @@
 package MyScratchPad;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-
 public class AmazonCOM_Test {
 	WebDriver driver;
-
 
 	@BeforeEach
     public void setup() throws InterruptedException {
@@ -22,34 +21,32 @@ public class AmazonCOM_Test {
 		//     !!!!!     DISABLED TESTS                    !!!!!
 		}
 
-	@Disabled
+	//@Disabled
 	@Test
-	public void SearchFirstitemTestJunit5() throws InterruptedException {
-		Thread.sleep(1000);
-	        	//Step 03: Enter "IPhone 11" in Edit Box
+	public void search_phone11_test() throws InterruptedException {
+		       	//Step 03: Enter "IPhone 11" in Edit Box
 				driver.findElement(By.id("twotabsearchtextbox")).sendKeys("IPhone 11");
 				//Step 04: Click on Search Button
 				driver.findElement(By.id("nav-search-submit-button")).click();
-				//Step 05: Click the Fourth link in the result page
-				//driver.findElement(By.xpath("//*[@id=\"sp-cc-accept\"]")).click();
-				System.out.println("First Search");
+				System.out.println("First Search url " +driver.getCurrentUrl());
+				boolean firstSearch = driver.getCurrentUrl().contains("IPhone+11");
+				Assertions.assertTrue(firstSearch);
 	}
 
-	@Disabled
+	//@Disabled
 	@Test
-	public void SearchSeconditemTest() throws InterruptedException {
-		Thread.sleep(1000);
-	        	//Step 03: Enter "IPhone 11" in Edit Box 
+	public void search_phone_12_test() throws InterruptedException {
+		       	//Step 03: Enter "IPhone 11" in Edit Box
 				driver.findElement(By.id("twotabsearchtextbox")).sendKeys("IPhone 12");
 				//Step 04: Click on Search Button
 				driver.findElement(By.id("nav-search-submit-button")).click();
-				//Step 05: Click the Fourth link in the result page
-				//driver.findElement(By.xpath("//*[@id=\"sp-cc-accept\"]")).click();
-				System.out.println("Second Search");
+				System.out.println("Second Search url " +driver.getCurrentUrl());
+				boolean firstSearch = driver.getCurrentUrl().contains("IPhone+12");
+				Assertions.assertTrue(firstSearch);
 	}
 	
 	@AfterEach
      public void teardown() {
-            	driver.quit();
+            	//driver.quit();
         		}
 	}
