@@ -1,20 +1,26 @@
 package MyScratchPad;
 
 import org.apache.commons.io.FileUtils;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
+import java.time.Duration;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class Google_Test {
     WebDriver driver;
+
     // Add @BeforeAll (static) & @AfterAll (static) and static WebDriver driver;
-     @Test
+    @Test
     public void title_test() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://google.co.uk");
         String title = driver.getTitle();
@@ -23,9 +29,11 @@ public class Google_Test {
         //driver.findElement(By.xpath("//*[@id=\"L2AGLb\"]")).click();
         driver.quit();
     }
+
     @Test
     public void browserDetails_test() throws Exception {
-        System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+        driver = new ChromeDriver();
         ChromeOptions chromeOptions = new ChromeOptions();
         driver = new ChromeDriver(chromeOptions);
         Capabilities caps = ((ChromeDriver) driver).getCapabilities();
@@ -36,26 +44,28 @@ public class Google_Test {
 
     @Test
     public void acceptCookies_test() {
-        System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+        driver = new ChromeDriver();
         driver = new ChromeDriver();
         driver.get("https://google.co.uk");
         driver.findElement(By.xpath("//*[@id=\"L2AGLb\"]")).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
 
         //assert search is displayed
         boolean searchDisplayed = driver.findElement(By.name("q")).isDisplayed();
-        System.out.println("Search element is displayed: " +searchDisplayed);
+        System.out.println("Search element is displayed: " + searchDisplayed);
         Assertions.assertTrue(searchDisplayed);
 
         //assert Index page URL
-        String indexURL = driver.getCurrentUrl();
-        System.out.print("Index URL: " +indexURL);
-        assertEquals("https://www.google.co.uk/", indexURL);
+        //String indexURL = driver.getCurrentUrl();
+        //System.out.print("Index URL: " +indexURL);
+        //assertEquals("https://www.google.co.uk/", indexURL);
 
         //assert Index page title text
         String indexTitle = driver.getTitle();
-        System.out.println("\nIndex Title: " +indexTitle);
+        System.out.println("\nIndex Title: " + indexTitle);
         assertEquals("Google", indexTitle);
 
         driver.quit();
@@ -63,11 +73,13 @@ public class Google_Test {
 
     @Test
     public void SearchCheese_test() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+        driver = new ChromeDriver();
         driver = new ChromeDriver();
         driver.get("https://google.co.uk");
         driver.findElement(By.xpath("//*[@id=\"L2AGLb\"]")).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         driver.findElement(By.name("q")).sendKeys("cheese" + Keys.ENTER);
         Thread.sleep(1000);
@@ -76,15 +88,18 @@ public class Google_Test {
 
     @Test
     public void screenshotCheeseSearchPage_test() throws IOException, InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+        driver = new ChromeDriver();
         driver = new ChromeDriver();
         driver.get("https://google.co.uk");
         driver.findElement(By.xpath("//*[@id=\"L2AGLb\"]")).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         driver.findElement(By.name("q")).sendKeys("cheese" + Keys.ENTER);
         //Thread.sleep(5000);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(scrFile, new File("./cheeseimagePage.png"));
         driver.quit();

@@ -1,0 +1,8 @@
+A) Create Duff folder
+     src min for zAi run
+B) New Push 02_zAi
+C) GitHub code review of src Amazon tests
+D) Report issues
+E) MOVE TO NEXT CHAPTER
+F) Ch01-10 completed then return to complete duff
+G) GitHub to create index.html and child pages for each test

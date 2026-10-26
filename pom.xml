@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -36,7 +36,8 @@
                     </includes>
                     <excludes>
                         <exclude>
-                            **/MouseHovers_3_Test.java</exclude>
+                            **/MouseHovers_3_Test.java
+                        </exclude>
                     </excludes>
                     <properties>
                         <!-- <includeTags>fast</includeTags> -->
@@ -48,41 +49,55 @@
                         -->
                     </properties>
                 </configuration>
-<!--                <dependencies>-->
-<!--                    <dependency>-->
-<!--                        <groupId>org.junit.platform</groupId>-->
-<!--                        <artifactId>junit-platform-surefire-provider</artifactId>-->
-<!--                        <version>${junit.platform.version}</version>-->
-<!--                    </dependency>-->
-<!--                </dependencies>-->
+                <!--                <dependencies>-->
+                <!--                    <dependency>-->
+                <!--                        <groupId>org.junit.platform</groupId>-->
+                <!--                        <artifactId>junit-platform-surefire-provider</artifactId>-->
+                <!--                        <version>${junit.platform.version}</version>-->
+                <!--                    </dependency>-->
+                <!--                </dependencies>-->
             </plugin>
         </plugins>
     </build>
     <dependencies>
-               <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <!-- dependency-->
+        <!-- groupId>org.seleniumhq.selenium</groupId-->
+        <!--artifactId>selenium-java</artifactId-->
+        <!-- version>4.27.1</version-->
+        <!-- version>4.23.1</version-->
+        <!--version>4.40.0</version-->
+        <!--scope>compile</scope-->
+        <!--/dependency-->
+
+        <!-- Source: https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.27.1</version>
+            <!--version>4.0.0+</version-->
+            <version>4.33.0</version>
+            <!--scope>compile</scope-->
+        </dependency>
+
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.15.1</version>
         </dependency>
         <dependency>
-                     <groupId>commons-io</groupId>
-                     <artifactId>commons-io</artifactId>
-                     <version>2.15.1</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
         </dependency>
-         <dependency>
-             <groupId>org.junit.jupiter</groupId>
-             <artifactId>junit-jupiter-api</artifactId>
-             <version>${junit.jupiter.version}</version>
-             <scope>test</scope>
-         </dependency>
-         <dependency>
-             <groupId>org.junit.vintage</groupId>
-             <artifactId>junit-vintage-engine</artifactId>
-             <version>${junit.vintage.version}</version>
-             <scope>test</scope>
-         </dependency>
-         <!-- Only required to run tests in an IDE that bundles an older version -->
+        <dependency>
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId>
+            <version>${junit.vintage.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- Only required to run tests in an IDE that bundles an older version -->
         <dependency>
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-launcher</artifactId>
@@ -109,22 +124,22 @@
             <version>1.18.34</version>
             <scope>provided</scope>
         </dependency>
-                        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
-                        <dependency>
-                            <groupId>org.slf4j</groupId>
-                            <artifactId>slf4j-api</artifactId>
-                            <version>2.0.13</version>
-                        </dependency>
-<!--        <dependency>-->
-<!--            <groupId>io.github.bonigarcia</groupId>-->
-<!--            <artifactId>webdrivermanager</artifactId>-->
-<!--            <version>5.4.1</version>-->
-<!--        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
         <dependency>
-        <groupId>org.apache.httpcomponents</groupId>
-        <artifactId>httpclient</artifactId>
-        <version>4.5.14</version>
-    </dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.13</version>
+        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>io.github.bonigarcia</groupId>-->
+        <!--            <artifactId>webdrivermanager</artifactId>-->
+        <!--            <version>5.4.1</version>-->
+        <!--        </dependency>-->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.14</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore -->
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
