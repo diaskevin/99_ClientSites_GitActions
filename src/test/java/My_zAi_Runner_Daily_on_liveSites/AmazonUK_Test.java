@@ -1,4 +1,4 @@
-package MyScratchPad;
+package My_zAi_Runner_Daily_on_liveSites;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
