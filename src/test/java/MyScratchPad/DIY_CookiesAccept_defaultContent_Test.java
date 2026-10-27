@@ -2,7 +2,6 @@ package MyScratchPad;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -48,7 +47,7 @@ public class DIY_CookiesAccept_defaultContent_Test {
         driver.switchTo().defaultContent();
     }
 
-    @Disabled
+    @Test
     public void test_SearchDrill() throws InterruptedException {
         driver.findElement(By.xpath("//*[@id=\"headlessui-control-_R_1d6535_\"]")).sendKeys("drill");
         driver.findElement(By.xpath("//button[@type='submit']")).click();
