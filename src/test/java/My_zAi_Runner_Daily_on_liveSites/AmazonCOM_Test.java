@@ -10,15 +10,12 @@ public class AmazonCOM_Test {
 
     @BeforeEach
     public void setup() throws InterruptedException {
-        //System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://amazon.com");
         Thread.sleep(3000);
-        //     !!!!!     OBSERVE: MANUAL INPUT CAPTCHA     !!!!!
-        //     !!!!!     DISABLED TESTS                    !!!!!
-    }
-
-    @Disabled
+     }
+     @Test
+     @Disabled("Amazon may present a CAPTCHA or anti-bot challenge; keep this as a manual test but Disable from scheduled execution")
     public void search_phone11_test() throws InterruptedException {
         //Step 03: Enter "IPhone 11" in Edit Box
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("IPhone 11");
@@ -28,8 +25,8 @@ public class AmazonCOM_Test {
         boolean firstSearch = driver.getCurrentUrl().contains("IPhone+11");
         Assertions.assertTrue(firstSearch);
     }
-
-    @Disabled
+    @Test
+    @Disabled("Amazon may present a CAPTCHA or anti-bot challenge; keep this as a manual test but Disable from scheduled execution")
     public void search_phone_12_test() throws InterruptedException {
         //Step 03: Enter "IPhone 12" in Edit Box
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("IPhone 12");
@@ -39,7 +36,6 @@ public class AmazonCOM_Test {
         boolean firstSearch = driver.getCurrentUrl().contains("IPhone+12");
         Assertions.assertTrue(firstSearch);
     }
-
     @AfterEach
     public void teardown() {
         driver.quit();

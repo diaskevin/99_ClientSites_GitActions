@@ -1,0 +1,39 @@
+diaskevin/02_MySeleniumCoverage:
+Duff folder- Not yet Run
+
+src/test/My_zAi contains 4 Java test classes:
+    The main themes are cookie acceptance, browser setup, basic page navigation, and XPath-based element selection.
+        Several tests are intentionally disabled & Issues raised
+
+AmazonCOM_Test
+A smoke test.
+Opens the site, waits a few seconds,
+has disabled search tests for “IPhone 11” and “IPhone 12”.
+Good example of a basic page-load + manual CAPTCHA / disabled flow.
+
+AmazonUK_Test.java
+Cookie handling
+Search, then explores selecting product results by XPath.
+Most of the search/selection methods are disabled.
+
+DIY_CookiesAccept_defaultContent_Test.java
+Visits DIY.com & verifies the title,
+waits for the consent banner, clicks “Accept Cookies,”
+then switches back to default content.
+The actual search test (test_SearchDrill) is disabled.
+This is a cleaner example of handling a consent banner and browser switching.
+
+Google_Test.java
+A collection of scratch-pad Selenium experiments:
+title test
+browser details test
+cookie acceptance flow
+search for “cheese”
+screenshot of the results page
+It’s the most “learning exercise” style file and has a few repeated new ChromeDriver() calls and older patterns.
+Overall takeaway:
+
+
+To Do:
+summarize the exact Selenium patterns being practiced in each class,
+Raise further issues to identify which tests look broken / need fixes.
