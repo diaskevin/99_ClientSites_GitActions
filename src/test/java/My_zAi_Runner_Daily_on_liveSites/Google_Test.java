@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
@@ -32,7 +31,7 @@ public class Google_Test {
     @Test
     public void browserDetails_test() throws Exception {
         //System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
-        driver = new ChromeDriver();
+        //driver = new ChromeDriver();
         ChromeOptions chromeOptions = new ChromeOptions();
         driver = new ChromeDriver(chromeOptions);
         Capabilities caps = ((ChromeDriver) driver).getCapabilities();
@@ -44,7 +43,6 @@ public class Google_Test {
     @Test
     public void acceptCookies_test() {
         //System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
-        driver = new ChromeDriver();
         driver = new ChromeDriver();
         driver.get("https://google.co.uk");
         driver.findElement(By.xpath("//*[@id=\"L2AGLb\"]")).click();
@@ -74,7 +72,6 @@ public class Google_Test {
     public void SearchCheese_test() throws InterruptedException {
         //System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         driver = new ChromeDriver();
-        driver = new ChromeDriver();
         driver.get("https://google.co.uk");
         driver.findElement(By.xpath("//*[@id=\"L2AGLb\"]")).click();
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -88,7 +85,6 @@ public class Google_Test {
     @Test
     public void screenshotCheeseSearchPage_test() throws IOException, InterruptedException {
         //System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
-        driver = new ChromeDriver();
         driver = new ChromeDriver();
         driver.get("https://google.co.uk");
         driver.findElement(By.xpath("//*[@id=\"L2AGLb\"]")).click();

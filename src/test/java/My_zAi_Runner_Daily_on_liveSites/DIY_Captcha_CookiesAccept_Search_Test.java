@@ -11,12 +11,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class DIY_CookiesAccept_defaultContent_Test {
+public class DIY_Captcha_CookiesAccept_Search_Test {
     WebDriver driver;
 
     @BeforeEach
@@ -52,26 +50,28 @@ public class DIY_CookiesAccept_defaultContent_Test {
     }
 
     @Test
+    @Disabled("HUMAN INTERVENTION REQUIRED")
     public void test_SearchDrill() throws InterruptedException {
 
         String title = driver.getTitle();
         System.out.println("Title text: " + title);
-        Thread.sleep(30000);
+        Thread.sleep(20000);
 
-
+        driver.findElement(By.xpath("//*[@id=\"headlessui-control-_R_1d9l35_\"]")).click();
+        Thread.sleep(3000);
         driver.findElement(By.xpath("//*[@id=\"headlessui-control-_R_1d9l35_\"]")).sendKeys("drill");
         System.out.println("Entered Drill");
         Thread.sleep(3000);
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         System.out.println("Click Submit");
-        Thread.sleep(30000);
+        Thread.sleep(3000);
 
+        //ASSERT
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement searchPage = driver.findElement(By.xpath("//*[@id=\"main-content\"]/div[1]/div/h1"));
-        String result = searchPage.getText();
-        System.out.println("Search Page displays text: " + result);
-        //assertEquals("Search results for", result);
-        //assertEquals("Drills", result);
+        WebElement drillsHeading = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(
+                        By.cssSelector("h1[data-slot='page-title-heading']")));
+        assertEquals(drillsHeading.getText().trim(), "Drills");
     }
 
     @AfterEach
