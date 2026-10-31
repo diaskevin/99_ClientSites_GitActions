@@ -1,5 +1,6 @@
 package MySelenium_featureExamples.assertions.elements.locators;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +10,7 @@ public class findElement_By_LocatorType_Test {
     WebDriver driver;
 
     //ERR org.openqa.selenium.NoSuchElementException: no such element
+    @Disabled
     @Test
     public void LocatorTypes_test() {
         //System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");

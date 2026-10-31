@@ -112,8 +112,7 @@ public class Actions_Mouse_Test extends BaseChrome_utility {
         Assertions.assertEquals("hovered", driver.findElement(By.id("move-status")).getText());
     }
 
-    @Disabled
-    @Test
+        @Test
     public void moveByOffsetFromElement_test() {
         driver.get("https://www.selenium.dev/selenium/web/mouse_interaction.html");
         driver.manage().window().fullscreen();

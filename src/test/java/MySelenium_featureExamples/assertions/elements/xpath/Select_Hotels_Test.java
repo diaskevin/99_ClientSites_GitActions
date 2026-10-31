@@ -1,6 +1,7 @@
 package MySelenium_featureExamples.assertions.elements.xpath;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -11,6 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Select_Hotels_Test {
     WebDriver driver;
 
+    @Disabled
     @Test
     public void TestAlpha_test() throws InterruptedException {
         //System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");

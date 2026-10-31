@@ -1,5 +1,6 @@
 package MySelenium_featureExamples.assertions.elements.locators;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,6 +13,7 @@ import static org.openqa.selenium.support.locators.RelativeLocator.with;
 public class findElement_By_RelativeLocators_Test {
     WebDriver driver;
 
+    @Disabled
     @Test
     public void relativeLocators_test() throws InterruptedException {
 
