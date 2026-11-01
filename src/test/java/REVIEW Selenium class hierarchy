@@ -1,0 +1,9 @@
+Selenium Documentation:- 
+
+Class within a class hierarchy:
+    The remote webdriver class is a part of the Selenium WebDriver framework 
+    that allows you to execute browser automation tests on a remote machine or server. 
+    It enables you to run your tests on different browsers and operating systems without having to install them locally. 
+    The RemoteWebDriver class communicates with a remote server (like Selenium Grid) using the WebDriver protocol, 
+    allowing you to control browsers running on different machines.  
+

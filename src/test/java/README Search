@@ -1,0 +1,16 @@
+SEARCH INTELLIJ
+1. To Search for the URL In IntelliJ:
+        press: Ctrl + Shift + F     
+2. In the search bar, enter the URL you want to find.
+3. Press Enter to start the search.
+4. Review the search results in the new tab that opens.
+      Tick 'Open Results in new tab' 
+                  & Click 'Open in Find Window'
+5. Click on the desired result to navigate to the tests specific line of code containing the URL.
+       
+              
+              
+      
+              
+                
+

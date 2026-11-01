@@ -1,0 +1,16 @@
+What does ChromeOptions do?
+ChromeOptions is a class in Selenium WebDriver
+that allows you to customize and configure the behavior of the Chrome browser when running automated tests.
+It provides various options to:
+    set preferences,
+    enable or disable features,
+    control the browser's behavior.
+
+Some common uses of ChromeOptions include:
+1. Setting the browser to run in headless mode (without a GUI).   
+2. Disabling extensions or plugins that may interfere with tests.
+3. Specifying the path to a custom Chrome binary or user profile.
+4. Configuring proxy settings for network requests.
+5. Adding command-line arguments to modify browser behavior (e.g., disabling GPU, setting window size).
+    
+
