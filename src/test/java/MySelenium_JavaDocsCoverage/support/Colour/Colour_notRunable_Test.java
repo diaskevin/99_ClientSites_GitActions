@@ -11,8 +11,7 @@ import org.openqa.selenium.support.Color;
 public class
 Colour_notRunable_Test {
 
-    // Non of the following is runable at the moment
-
+    // None of the following is runable at the moment
     private final Color HEX_COLOUR = Color.fromString("#2F7ED8");
     private final Color RGB_COLOUR = Color.fromString("rgb(255, 255, 255)");
     //private final Color RGB_COLOUR = Color.fromString("rgb(40%, 20%, 40%)");
@@ -36,20 +35,16 @@ Colour_notRunable_Test {
 
     @Test
     public void colour_Test_test() {
-        //driver.get("http://www.w3.org/TR/css3-color/#html4");
-        //driver.get("https://www.selenium.dev");
-        //driver.get("https://www.selenium.dev/selenium/web/formPage.html");
-        //driver.get("https://www.selenium.dev/selenium/web/colorPage.html");
         driver.get("https://www.selenium.dev/selenium/web/login.html");
 
         Color loginButtonColour = Color.fromString(driver.findElement(By.id("login-form-submit")).getCssValue("color"));
         Color loginButtonBackgroundColour = Color.fromString(driver.findElement(By.id("login-form-submit")).getCssValue("background-color"));
 
-        //assert loginButtonBackgroundColour.equals(HOTPINK);
+        System.out.println("loginButtonColour: " + loginButtonColour);
+        System.out.println("loginButtonBackgroundColour: " + loginButtonBackgroundColour);
 
-        //assert loginButtonBackgroundColour.asHex().equals("#ff69b4");
-        //assert loginButtonBackgroundColour.asRgba().equals("rgba(255, 105, 180, 1)");
-        //assert loginButtonBackgroundColour.asRgb().equals("rgb(255, 105, 180)");
+        assert loginButtonColour.asRgba().equals("rgba(0, 0, 0, 1)");
+        assert loginButtonBackgroundColour.asRgba().equals("rgba(240, 240, 240, 1)");
 
         driver.quit();
     }

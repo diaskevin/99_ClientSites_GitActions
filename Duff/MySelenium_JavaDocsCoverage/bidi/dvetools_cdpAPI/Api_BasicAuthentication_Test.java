@@ -1,4 +1,4 @@
-package MySelenium_JavaDocsCoverage.bidi.dvetools_cdpAPI;
+package MySelenium_JavaDocsCoverage.bidi.d;
 
 import com.google.common.collect.ImmutableMap;
 import org.junit.jupiter.api.BeforeEach;

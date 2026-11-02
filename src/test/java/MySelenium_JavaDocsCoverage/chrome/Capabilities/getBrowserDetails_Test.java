@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chromium.ChromiumDriver;
 
 public class getBrowserDetails_Test {
-    //Note Global declared 'ChromiumDriver'
+//  Note Global declared 'ChromiumDriver'
 //  This is used instead of WebDriver
 //  WebDriver  is 'too super' for Capabilities method
 //  Capabilities method is in ChromiumDriver class

@@ -14,7 +14,14 @@ public class RemoteAllowOrigins_Test {
 
     @BeforeEach
     public void setup() {
-        //This fix was used to resolve the old Selenium3 problem caused by using the wrong selenium dependency on the POM
+        // This fix was used to resolve the old Selenium3 problem caused by using the wrong selenium dependency on the POM
+        // This passes a command-line parameter to Chrome.
+        // Historically, this was used around Chrome 111 when many people received errors such as:
+                //1. Plain Text
+                //2. disconnected: not connected to DevTools
+        // The argument tells Chrome to allow remote origins from anywhere (*).
+        // In modern Selenium versions this is rarely needed.
+
         //System.setProperty("webdriver.chrome.driver",  "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--remote-allow-origins=*");
@@ -27,7 +34,7 @@ public class RemoteAllowOrigins_Test {
     }
 
     @Test
-    public void hovers_test() {
+    public void canLaunchChromeUsingRemoteAllowOrigins() {
         driver.get("http://Amazon.com");
     }
 }

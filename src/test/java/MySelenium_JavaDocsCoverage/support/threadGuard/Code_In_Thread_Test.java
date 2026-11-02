@@ -7,8 +7,9 @@ import org.openqa.selenium.support.ThreadGuard;
 
 public class Code_In_Thread_Test {
     WebDriver driver;
-    // This example shows how to run code in a thread
-    //Observe 'main method' is calling methods
+    // This example shows how to run code in a thread (Observe 'main method' is calling methods)
+    //ChromeDriver is created in the main thread, then accessed from a separate Java thread.
+    // ThreadGuard wraps the driver to detect unsafe cross-thread WebDriver usage and helps identify threading issues when running parallel Selenium tests. It's primarily a learning example showing how WebDriver behaves in multi-threaded environments rather than a functional UI test.
 
     Runnable r1 = () -> {
         WebDriver protectedDriver1 = ThreadGuard.protect(driver);
@@ -20,7 +21,6 @@ public class Code_In_Thread_Test {
         }
     };
     Thread thr1 = new Thread(r1);
-
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         // 'Main' is generally static, so we have to create an object for this class
@@ -28,14 +28,12 @@ public class Code_In_Thread_Test {
         Code_In_Thread_Test test = new Code_In_Thread_Test();
         test.runThread();
     }
-
     void runThread() {
         //System.out.println("invoke Thread start");
         driver = getChromeDriver();
         thr1.start();
         driver.quit();
     }
-
     public ChromeDriver getChromeDriver() {
         ChromeOptions options = new ChromeOptions();
         options.setCapability("webSocketUrl", true);

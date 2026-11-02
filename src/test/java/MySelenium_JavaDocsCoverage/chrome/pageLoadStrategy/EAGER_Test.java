@@ -17,6 +17,13 @@ public class EAGER_Test {
 
     @Test
     public void pageStrategyEager_test() throws InterruptedException {
+        //EAGER, NORMAL, and NONE are Selenium Page Load Strategies.
+        // They control how long WebDriver waits after driver.get()
+                //NORMAL: Waits until the initial HTML document has been completely loaded and parsed,
+                //EAGER:  Waits until the initial HTML document has been completely loaded and parsed,
+                          //but does not wait for stylesheets, images, and subframes to finish loading.
+                //NORMAL: Immediately continues without waiting for any resources to load.
+
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
         driver = new ChromeDriver(chromeOptions);

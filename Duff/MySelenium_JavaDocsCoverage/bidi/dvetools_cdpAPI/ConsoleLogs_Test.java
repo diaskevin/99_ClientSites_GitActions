@@ -1,4 +1,4 @@
-package MySelenium_JavaDocsCoverage.bidi.dvetools_cdpAPI;
+package MySelenium_JavaDocsCoverage.bidi.d;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
