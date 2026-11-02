@@ -1,0 +1,14 @@
+To understand what the methods in Selenium do, refer to the official Selenium documentation.
+
+1. Visit the Official Selenium Website: Go to the Selenium official website at
+        https://www.selenium.dev/documentation/
+2. Navigate to the API Documentation:
+        Look for the API documentation section, which provides detailed information about the classes, methods, and their functionalities.
+3. Read Method Descriptions:
+        Each method in the documentation will have a description explaining what it does, its parameters, return values, and any exceptions it may throw.
+4. Check Examples:
+        Many methods include code examples that demonstrate how to use them in practice. This can help you understand their usage better.
+5. Search for Specific Methods:
+        If you are looking for a specific method, you can use the search functionality on the documentation page to quickly find it and read about its purpose and usage.
+
+
