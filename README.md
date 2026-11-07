@@ -1,96 +1,64 @@
 # Chapter99 Selenium JavaDocs
 
-The aim of this project is to provide Automation Testing of the packages provided by the Selenium 4 api as defined by
-Java docs:
-https://www.javadoc.io/doc/org.seleniumhq.selenium/selenium-api/2.50.1/overview-summary.html
+The aim of this project is to provide a runner on LIVE Client Sites that are changing all the time. 
+Modification effected by change include: 
+    Captcha & cookie accept
+    Browser versions  
+    page element * DOM changes (tree-like structure, content, style, etc)
+Extensibility across :
+    Devices (Physical, Virtual, GitHub Actions)
+    OS Types (Window & Mac & Linux)
+Runtime variables:
+    Waits
+    Scheduling 
+Reporting:
+    Central Results & logging & stack trace (monitoring pipeline output- ephemeral VMs)
+Scheduling:
+    Jenkins
+    GitLab CI/CD
 
-Three Projects:
-MySelenium_featureExamples
-MySelenium_JavaDocsCoverage
-MyRunner_ClientSites GoogleTest AmazonCOM_Test AmazonUK_Test DIY_Test
+CLIENT SITES
+------------
+AmazonCOM_Test
+A smoke test.
+Opens the site, waits a few seconds,
+has disabled search tests for “IPhone 11” and “IPhone 12”.
+Good example of a basic page-load + manual CAPTCHA / disabled flow.
 
-## Convention
+AmazonUK_Test.java
+Cookie handling
+Search, then explores selecting product results by XPath.
+Most of the search/selection methods are disabled.
 
-See Chapter01 Readme (Globally declare WebDriver with @Before constructor for Driver Type).
-NEW: >Selenium 4.23.1, includes Selenium Manager. 👉 That means DONOT set the chromedriver path manually, comment-out (
-System.setProperty... path to "webdriver.chrome.driver")
-👉 On POM, use generic version for selenium-java i.e. <version>4.0.0+</version>
+DIY_CookiesAccept_defaultContent_Test.java
+Visits DIY.com & verifies the title,
+waits for the consent banner, clicks “Accept Cookies,”
+then switches back to default content.
+The actual search test (test_SearchDrill) is disabled.
+This is a cleaner example of handling a consent banner and browser switching.
 
-👉 For now, DevTools (CDP-api) tests have been @Disabled
-👉 For now, ParseInt tests have been @Disabled
-👉 HeadlessEdge_Test() now usese System.setProperty not browser manager. Also, first cleared selenium .cache on local
-machine
+Google_Test.java
+A collection of scratch-pad Selenium experiments:
+title test
+browser details test
+cookie acceptance flow
+search for “cheese”
+screenshot of the results page
 
-### Configuration
 
-SeeChapter01 Readme (By default Chrome browser type and dirty repo BrowserDriver.exe location in c:/qa with dependency
-resolution by Baelined POM).
-VALIDATE Run Repo_ch02 Maven project (one baslined POM) across two Windows machines.
-VALIDATE run duration times on multiple devices (HP_Laptop, Hp_Family, MAC).
+REVIEW (See GITHUB_ACTIONS_GUIDE.md):
+------------
+VALIDATE GitHub Actions to run Maven tests
+    VERIFY Maven dependency resolution
+    VERIFY Maven headless runner
+    VERIFY No regional local functionality within tests
+    VERIFY Central results reporting
 
-As a prelude to Ch03:
-VALIDATE run of BrowserTypes on several machines.
+Confirm Setup 1:  Configure pom.xml So Maven Can Run JUnit 5 Tests
+Confirm Setup 2:  Update Your Selenium Test Class for Headless Mode & Optional Popups
+Confirm Setup 3: Add a getChromeOptions() Helper Method for Headless Mode
+Confirm Setup 4: Handle Cookie Banners Gracefully (Don't Assume They Always Appear)
+Confirm Setup 5: Create the GitHub Actions Workflow File (With a Live Results Summary Table!)
 
-Selenium inheritance note:
-WebDrive is an interface
-ChromiumDriver extends RemoteDriver, which in turn implements WebDriver interface
-ChromeDriver and EdgeDriver are child classes of ChromiumDriver
-GeckoDriver is NOT within ChromiumDriver
-Capabilities is a method WITHIN ChromiumDriver with a return type of 'Capabilities'
-VERIFY WebDrive has own 'this' constructor with a return type of WebDriver
-VERIFY ChromiumOptions has own 'this' constructor with a return type of ChromiumOptions
-VERIFY Capabilities has own 'this' constructor with a return type of Capabilities    
-Observer: WebDriver Constructor- WebDriver declared (as driver), new constructor for Driver Type, only then use the
-driver.get
-Observer: Capabilities Constructor- Capabilities declared (as cap), new constructor for Capabilities, then
-cap.getBrowserNName
-Observer: ChromiumOptions Constructor- ChromiumOptions declared (as options), new constructor for ChromeOptions, then
-options.setMaximizeWindow
-Example of Java CONSTRUCTORS:
-1) WedDriver CONSTRUCTOR
-WebDriver driver;
-driver = new ChromeDriver();
-driver.get(bbc.co.uk);
-2) ChromiumOptions CONSTRUCTOR
-WebDriver driver;
-ChromeOptions options = new ChromeOptions();
-options.setMaxmizeWindow();
-3) ChromeDriver CONSTRUCTOR (See doc_CAPABILITIES/mutableCapabilities/SeleniumCapabilities_Test)
-Capabilities cap;
-cap = driver.getCapabilities();
-String browser= cap.getBrowserName();
-BUT WE NEED TO GO DOWN TO CHORMIUM
-ChromiumDriver driver;
-driver = new ChromeDriver();
-driver.get("bbc.co.uk")'
-Capabilities cap;
-cap = driver.getCapabilities();
-String browser= cap.getBrowserName();
-
-Class Hierarchy tip (see the flow driagram created for this project (using https://app.diagrams.net):
-WedDriver, RemoteWebDriver, ChromiumDiver  [with method Captbilities()]
-WedDriver, RemoteWebDriver, ChromiumDiver, [children: @ChromeDriver @EdgeDriver]
-To view Class documentation: Click Ctrl, click blue hyperlink <Class_Name>
-Click blue '@' in Documentation to see children classes of the current class
-VERIFY ChromiumDriver has a method within it called Capabilities() and that  
-VERIFY WedDriver with child RemoteWebDriver
-VERIFY RemoteWebDriver with child ChromiumDiver
-VERIFY ChromiumDiver with method Captbilities()
-VERIFY IntelliSense on a child class displays methods inherited up the chain from super classes above
-
-WIP:
-VERIFY what are the affected child classes of 'Base Utility'
-VERIFY what class uses POM commons-io 2.15.1
-VERIFY element with type By for xpath Id.
-VERIFY element with type By for xpath Name.
-VERIFY element with type By for xpath Id and getTyxt (Type cast?).
-VERIFY Frame with WebElement getText.
-VERIFY Window with WebElement and getText.
-VERIFY WindowHandle WebElement and getText.
-VALIDATE log SPLF.
-VALIDATE log 4kj?.
-VALIDATE charted progress with JavDocs.
-VALIDATE Local Run of Repo ch02 across browsers (Safari & Edge) on one machine.
-VALIDATE Run Repo_ch02 Maven project (one POM) across two machine (Windows & Mac).
-VALIDATE skill to run the official Selenium Dev Repo on GitHub:
-https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/README.md
+Confirm run: Github Actions
+Confirm run: Local machine

@@ -1,8 +1,0 @@
-Add a breakpoint to WebDriver creation
-
-Search for: Java new ChromeDriver()
-Place a breakpoint there and run debugger
-Debugger Call stack will show the sequence of method calls that led to the creation of the ChromeDriver instance.
-This will help you understand which step exactly:
-    1) Created the browser
-    2) Opened the URL
