@@ -1,4 +1,4 @@
-package My_zAi_Runner_ClientSites_ScheduledMonthly;
+package MyRunner_ClientSites;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.Assertions;

@@ -1,4 +1,4 @@
-# Chapter02 Selenium JavaDocs
+# Chapter99 Selenium JavaDocs
 
 The aim of this project is to provide Automation Testing of the packages provided by the Selenium 4 api as defined by
 Java docs:
@@ -7,7 +7,7 @@ https://www.javadoc.io/doc/org.seleniumhq.selenium/selenium-api/2.50.1/overview-
 Three Projects:
 MySelenium_featureExamples
 MySelenium_JavaDocsCoverage
-My_zAi_Runner_ClientSites_ScheduledMonthly GoogleTest AmazonCOM_Test AmazonUK_Test DIY_Test
+MyRunner_ClientSites GoogleTest AmazonCOM_Test AmazonUK_Test DIY_Test
 
 ## Convention
 
