@@ -6,6 +6,9 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
@@ -15,11 +18,33 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class Google_Test {
     WebDriver driver;
 
+    private ChromeOptions getChromeOptions() {
+        ChromeOptions options = new ChromeOptions();
+        if ("true".equalsIgnoreCase(System.getenv("CI")) || "true".equalsIgnoreCase(System.getProperty("headless"))) {
+            options.addArguments("--headless=new");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--window-size=1920,1080");
+        }
+        return options;
+    }
+
+    private void acceptCookiesIfPresent(WebDriver driver) {
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+            WebElement acceptBtn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"L2AGLb\"]")));
+            acceptBtn.click();
+        } catch (TimeoutException | NoSuchElementException e) {
+            System.out.println("Cookie consent banner did not appear (or already dismissed).");
+        }
+    }
+
+
     // Add @BeforeAll (static) & @AfterAll (static) and static WebDriver driver;
     @Test
     public void title_test() throws InterruptedException {
         //System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(getChromeOptions());
         driver.get("https://google.co.uk");
         String title = driver.getTitle();
         System.out.println("Title: " + title);
@@ -32,7 +57,7 @@ public class Google_Test {
     public void browserDetails_test() throws Exception {
         //System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         //driver = new ChromeDriver();
-        ChromeOptions chromeOptions = new ChromeOptions();
+        ChromeOptions chromeOptions = getChromeOptions();
         driver = new ChromeDriver(chromeOptions);
         Capabilities caps = ((ChromeDriver) driver).getCapabilities();
         String version = caps.getBrowserVersion();
@@ -43,9 +68,10 @@ public class Google_Test {
     @Test
     public void acceptCookies_test() {
         //System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(getChromeOptions());
         driver.get("https://google.co.uk");
-        driver.findElement(By.xpath("//*[@id=\"L2AGLb\"]")).click();
+        acceptCookiesIfPresent(driver);
+        //driver.findElement(By.xpath("//*[@id=\"L2AGLb\"]")).click();
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();

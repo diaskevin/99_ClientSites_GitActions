@@ -54,10 +54,11 @@ VALIDATE GitHub Actions to run Maven tests
     VERIFY No regional local functionality within tests
     VERIFY Central results reporting
 
-Confirm Setup 1:  Configure pom.xml So Maven Can Run JUnit 5 Tests
-Confirm Setup 2:  Update Your Selenium Test Class for Headless Mode & Optional Popups
-Confirm Setup 3: Add a getChromeOptions() Helper Method for Headless Mode
-Confirm Setup 4: Handle Cookie Banners Gracefully (Don't Assume They Always Appear)
+Setup 1:  Configure pom.xml So Maven Can Run JUnit 5 Tests
+Setup 2:  Update Your Selenium Test Class for Headless Mode & Optional Popups
+Setup 3: Add a getChromeOptions() Helper method for Headless Mode
+Setup 4: Add a acceptCookiesIfPresent() Helper method for gracefully popup handling
+
 Confirm Setup 5: Create the GitHub Actions Workflow File (With a Live Results Summary Table!)
 
 Confirm run: Github Actions
