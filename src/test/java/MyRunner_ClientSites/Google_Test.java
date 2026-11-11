@@ -100,7 +100,7 @@ public class Google_Test {
         driver = new ChromeDriver(getChromeOptions());
         driver.get("https://google.co.uk");
         acceptCookiesIfPresent(driver);
-        driver.findElement(By.xpath("//*[@id=\"L2AGLb\"]")).click();
+        //driver.findElement(By.xpath("//*[@id=\"L2AGLb\"]")).click();
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
