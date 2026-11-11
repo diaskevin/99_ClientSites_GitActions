@@ -24,6 +24,7 @@ public class AmazonUK_Test {
         driver = new ChromeDriver(chromeOptions);
         driver.get("https://www.amazon.co.uk/");
 
+
         //(To accept cookies)
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
