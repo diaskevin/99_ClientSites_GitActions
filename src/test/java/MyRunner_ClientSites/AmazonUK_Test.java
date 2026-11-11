@@ -46,7 +46,6 @@ public class AmazonUK_Test {
         //System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--remote-allow-origins=*");
-
         driver = new ChromeDriver(chromeOptions);
         driver.get("https://www.amazon.co.uk/");
         //(To accept cookies)
