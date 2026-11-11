@@ -97,8 +97,9 @@ public class Google_Test {
     @Test
     public void SearchCheese_test() throws InterruptedException {
         //System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(getChromeOptions());
         driver.get("https://google.co.uk");
+        acceptCookiesIfPresent(driver);
         driver.findElement(By.xpath("//*[@id=\"L2AGLb\"]")).click();
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -111,8 +112,9 @@ public class Google_Test {
     @Test
     public void screenshotCheeseSearchPage_test() throws IOException, InterruptedException {
         //System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(getChromeOptions());
         driver.get("https://google.co.uk");
+        acceptCookiesIfPresent(driver);
         driver.findElement(By.xpath("//*[@id=\"L2AGLb\"]")).click();
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
