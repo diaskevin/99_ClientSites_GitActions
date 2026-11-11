@@ -152,7 +152,7 @@
             <artifactId>selenium-devtools-v126</artifactId>
             <version>4.24.0</version>
             <scope>compile</scope>
-        </--dependency-->
+        <dependency-->
     </dependencies>
 
 </project>
