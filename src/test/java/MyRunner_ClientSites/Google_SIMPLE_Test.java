@@ -134,5 +134,5 @@ public class Google_SIMPLE_Test {
 
     //123
     //ok
-     *//
+     */
 }
