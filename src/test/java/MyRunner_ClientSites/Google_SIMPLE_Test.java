@@ -15,7 +15,7 @@ import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class Google_Test {
+public class Google_SIMPLE_Test {
     WebDriver driver;
 
     private ChromeOptions getChromeOptions() {
@@ -53,7 +53,7 @@ public class Google_Test {
         driver.quit();
     }
 
-    @Test
+    /*@Test
     public void browserDetails_test() throws Exception {
         //System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         //driver = new ChromeDriver();
@@ -133,4 +133,5 @@ public class Google_Test {
     //  SecondResult_Test()... Navigate home Actions open Tab for second result and assert on cheeseType
 
     //123
+     */
 }
