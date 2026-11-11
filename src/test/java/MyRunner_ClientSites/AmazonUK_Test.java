@@ -15,19 +15,23 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AmazonUK_Test {
+    WebDriver driver;
+
+    private ChromeOptions getChromeOptions() {
+        ChromeOptions options = new ChromeOptions();
+        if ("true".equalsIgnoreCase(System.getenv("CI")) || "true".equalsIgnoreCase(System.getProperty("headless"))) {
+            options.addArguments("--headless=new");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--window-size=1920,1080");
+        }
+        return options;
+    }
     @Test
     public void acceptCookies_test() throws InterruptedException {
-        WebDriver driver;
         //System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--headless=new");
-        chromeOptions.addArguments("--no-sandbox");
-        chromeOptions.addArguments("--disable-dev-shm-usage");
-        chromeOptions.addArguments("--window-size=1920,1080");
-        chromeOptions.addArguments("--remote-allow-origins=*");
-        driver = new ChromeDriver(chromeOptions);
+        driver = new ChromeDriver(getChromeOptions());
         driver.get("https://www.amazon.co.uk/");
-
 
         //(To accept cookies)
         try {
@@ -47,15 +51,8 @@ public class AmazonUK_Test {
     @Test
     @Disabled("Null Pointer error on Span of found phones")
     public void searchSelectFirstPhone() {
-        WebDriver driver;
         //System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--headless=new");
-        chromeOptions.addArguments("--no-sandbox");
-        chromeOptions.addArguments("--disable-dev-shm-usage");
-        chromeOptions.addArguments("--window-size=1920,1080");
-        chromeOptions.addArguments("--remote-allow-origins=*");
-        driver = new ChromeDriver(chromeOptions);
+        driver = new ChromeDriver(getChromeOptions());
         driver.get("https://www.amazon.co.uk/");
         //(To accept cookies)
         try {
@@ -95,13 +92,7 @@ public class AmazonUK_Test {
     public void searchSelectSecondPhone() {
         WebDriver driver;
        // System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--headless=new");
-        chromeOptions.addArguments("--no-sandbox");
-        chromeOptions.addArguments("--disable-dev-shm-usage");
-        chromeOptions.addArguments("--window-size=1920,1080");
-        chromeOptions.addArguments("--remote-allow-origins=*");
-        driver = new ChromeDriver(chromeOptions);
+        driver = new ChromeDriver(getChromeOptions());
         driver.get("https://www.amazon.co.uk/");
 
         //(To accept cookies)
