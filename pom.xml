@@ -147,12 +147,12 @@
             <artifactId>httpcore</artifactId>
             <version>4.4.16</version>
         </dependency>
-        <!--dependency>
+        <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-devtools-v126</artifactId>
             <version>4.24.0</version>
             <scope>compile</scope>
-        <dependency-->
+        </dependency>
     </dependencies>
 
 </project>
