@@ -46,6 +46,7 @@ public class ANY_SIMPLE_Test {
 
         MatcherAssert.assertThat(driver.findElement(By.className("figcaption")).isDisplayed(), CoreMatchers.is(Boolean.TRUE));
     }
+    //test123
 }
 
 
