@@ -19,21 +19,20 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class ANY_SIMPLE_Test {
     WebDriver driver;
 
-    @BeforeEach
-    public void setup() {
-        //System.setProperty("webdriver.chrome.driver",  "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--remote-allow-origins=*");
-        this.driver = new ChromeDriver(chromeOptions);
-    }
-
-    @AfterEach
-    public void tearDown() {
-        driver.quit();
+    private ChromeOptions getChromeOptions() {
+        ChromeOptions options = new ChromeOptions();
+        if ("true".equalsIgnoreCase(System.getenv("CI")) || "true".equalsIgnoreCase(System.getProperty("headless"))) {
+            options.addArguments("--headless=new");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--window-size=1920,1080");
+        }
+        return options;
     }
 
     @Test
     public void hovers_test() {
+        driver = new ChromeDriver(getChromeOptions());
         driver.get("http://the-internet.herokuapp.com/hovers");
 
         WebElement avatar = driver.findElement(By.className("figure"));
@@ -45,8 +44,9 @@ public class ANY_SIMPLE_Test {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("figcaption")));
 
         MatcherAssert.assertThat(driver.findElement(By.className("figcaption")).isDisplayed(), CoreMatchers.is(Boolean.TRUE));
+
+        driver.close();
     }
-    //test123
 }
 
 
