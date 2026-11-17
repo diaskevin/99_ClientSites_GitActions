@@ -48,7 +48,7 @@ jobs:
 
     - name: Run Selenium Test
       env:
-        CI:'true'
+        CI: 'true'
       run: mvn test -Dtest="${{ inputs.test_class }}" -Dheadless=true
 
 
