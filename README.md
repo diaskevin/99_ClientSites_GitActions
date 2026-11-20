@@ -74,3 +74,6 @@ Setup 4: Add a acceptCookiesIfPresent() Helper method for gracefully popup handl
 Confirm Setup 5: Create the GitHub Actions Workflow File (With a Live Results Summary Table!)
 Confirm run: Github Actions
 Confirm run: Local machine
+
+
+
