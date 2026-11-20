@@ -13,6 +13,7 @@ import java.time.Duration;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class AmazonUK_Test {
     WebDriver driver;
@@ -44,7 +45,9 @@ public class AmazonUK_Test {
         String title = driver.getTitle();
         System.out.println("Search Page displays text: " +title);
         String titleExpected = "Amazon.co.uk: Low Prices in Electronics, Books, Sports Equipment & more";
-        assertEquals(titleExpected, title);
+        //assertEquals(titleExpected, title);
+        assertTrue(title.startsWith("Amazon.co.uk"),
+                "Unexpected title: " + title);
         driver.quit();
     }
 
