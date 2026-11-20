@@ -64,7 +64,7 @@ public class Simple2_Test {
 
         driver.close();
     }
-    //abc
+
     @Test
     public void hovers5_test() {
         driver = new ChromeDriver(getChromeOptions());
