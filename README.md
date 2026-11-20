@@ -4,22 +4,18 @@ The aim of this project is to provide a GitHub Actions runner.
     Convention:
         Browser versions handled by ChromeOptions
         Runtime variables: Implicit Waits
-        Yaml runs all automated tests using GitHub Actions  
+        Yaml runs tests using GitHub Actions  
             Reporting: Central Results & logging & stack trace (monitoring pipeline output- ephemeral VMs)
             Scheduling: ON 
                     push:           branches: [ "main" ]
                     pull_request:   branches: [ "main" ]  
-        Manual test that require Manual intervention:
-            LIVE Client Sites that require manual intervention 
-            Modification effected by change include: 
-            Captcha & cookie accept
-            page element * DOM changes (tree-like structure, content, style, etc)
+            Disabled test require Manual intervention:
+                        Captcha & cookie accept
+                        page element * DOM changes (tree-like structure, content, style, etc)
 
 Extensibility across:
     Devices (Physical, Virtual, GitHub Actions)
     OS Types (Window & Mac & Linux)
-
-
 
 AUTOMATED TESTS
 ---------------

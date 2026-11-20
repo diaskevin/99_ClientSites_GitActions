@@ -1,4 +1,4 @@
-package MyRunner_ClientSites;
+package MyRunner;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.Assertions;

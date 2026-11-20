@@ -1,4 +1,4 @@
-package MyRunner_ClientSites;
+package MyRunner;
 
 import org.hamcrest.CoreMatchers;
 import org.hamcrest.MatcherAssert;
@@ -14,7 +14,7 @@ import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class Simple_Test {
+public class herokuapp_Test {
     WebDriver driver;
 
     private ChromeOptions getChromeOptions() {

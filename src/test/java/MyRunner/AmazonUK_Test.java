@@ -1,4 +1,4 @@
-package MyRunner_ClientSites;
+package MyRunner;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
