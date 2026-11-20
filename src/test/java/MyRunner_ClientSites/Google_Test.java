@@ -3,6 +3,7 @@ package MyRunner_ClientSites;
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Disabled;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -54,7 +55,7 @@ public class Google_Test {
     }
 
     @Test
-    @DISABLED
+    @Disabled
     public void browserDetails_test() throws Exception {
         //System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         //driver = new ChromeDriver();
@@ -67,7 +68,7 @@ public class Google_Test {
     }
 
     @Test
-    @DISABLED
+    @Disabled
     public void acceptCookies_test() {
         //System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         driver = new ChromeDriver(getChromeOptions());
@@ -97,7 +98,7 @@ public class Google_Test {
     }
 
     @Test
-    @DISABLED
+    @Disabled
     public void SearchCheese_test() throws InterruptedException {
         //System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         driver = new ChromeDriver(getChromeOptions());
@@ -113,7 +114,7 @@ public class Google_Test {
     }
 
     @Test
-    @DISABLED
+    @Disabled
     public void screenshotCheeseSearchPage_test() throws IOException, InterruptedException {
         //System.setProperty("webdriver.chrome.driver", "C:\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
         driver = new ChromeDriver(getChromeOptions());
@@ -132,9 +133,6 @@ public class Google_Test {
         driver.quit();
         //Add cheeseimagePage.png to .gitIgnore
     }
-
     //  FirstResult_Test()... Actions open tab for first result and assert on cheeseType
     //  SecondResult_Test()... Navigate home Actions open Tab for second result and assert on cheeseType
-
-    //123
 }

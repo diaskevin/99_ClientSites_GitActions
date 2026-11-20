@@ -27,12 +27,26 @@ AmazonUK_Test.java
     Cookie handling
     Search
     Explores selecting product results by XPath
-    Most of the search/selection methods are disabled
+    Asserts title for acceptCookies_test
+    Mostly disabled tests (search/selection methods)
+
+Google_Test.java
+    Ignores cookie handling
+    Asserts title
+    browser details test
+    Mostly disabled tests (search/selection methods)
 
 
 
-MANUAL TESTS (human intervention)
+MANUAL TESTS (Disabled: requires human intervention)
 ------------
+AmazonUK_Test.java & Google_Test.java
+    Mostly disabled tests (search/selection methods)
+    Cookie handling
+    Search
+    Explores selecting product results by XPath
+    Asserts title for acceptCookies_test
+        
 AmazonCOM_Test
     Opens the site and waits
     disabled search tests for “IPhone 11” and “IPhone 12”
@@ -45,13 +59,6 @@ DIY_CookiesAccept_defaultContent_Test.java
     then switches back to default content
     The actual search test (test_SearchDrill) is disabled.
     This is a cleaner example of handling a consent banner and browser switching.
-
-Google_Test.java
-    A collection of scratch-pad Selenium experiments:
-    title test
-    browser details test
-    cookie acceptance flow
-    search for “cheese”
     screenshot of the results page
 
 
