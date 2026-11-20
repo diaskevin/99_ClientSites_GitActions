@@ -6,8 +6,6 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-### Option 1: Run ALL tests (simplest) ###
-
 name: MyRunner_ClientSites Java_Maven
 
 on:
@@ -17,6 +15,13 @@ on:
 #    branches: [ "main" ]
 
   workflow_dispatch:
+    inputs:
+      test_class:
+        description: 'Test class (or pattern) to run'
+        required: true
+        default: 'MyRunner_ClientSites.ANY_SIMPLE_Test'
+        type: string
+
 
 jobs:
   build:
@@ -39,10 +44,13 @@ jobs:
       with:
         chrome-version: stable
 
+
+
     - name: Run Selenium Test
       env:
         CI: 'true'
-      run: mvn test -Dheadless=true
+      run: mvn test -Dtest="${{ inputs.test_class }}" -Dheadless=true
+
 
     - name: Generate Test Summary on Actions Page
       if: always()
