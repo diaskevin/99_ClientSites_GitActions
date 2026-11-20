@@ -29,7 +29,7 @@ public class Simple2_Test {
     }
 
     @Test
-    public void hovers_test() {
+    public void hovers3_test() {
         driver = new ChromeDriver(getChromeOptions());
         driver.get("http://the-internet.herokuapp.com/hovers");
 
@@ -45,9 +45,10 @@ public class Simple2_Test {
 
         driver.close();
     }
+
 
     @Test
-    public void hovers_test2() {
+    public void hovers4_test() {
         driver = new ChromeDriver(getChromeOptions());
         driver.get("http://the-internet.herokuapp.com/hovers");
 
@@ -63,8 +64,21 @@ public class Simple2_Test {
 
         driver.close();
     }
+    @Test
+    public void hovers5_test() {
+        driver = new ChromeDriver(getChromeOptions());
+        driver.get("http://the-internet.herokuapp.com/hovers");
 
+        WebElement avatar = driver.findElement(By.className("figure"));
+
+        Actions builder = new Actions(driver);
+        builder.moveToElement(avatar).build().perform();
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(5000L));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("figcaption")));
+
+        MatcherAssert.assertThat(driver.findElement(By.className("figcaption")).isDisplayed(), CoreMatchers.is(Boolean.TRUE));
+
+        driver.close();
+    }
 }
-
-
-

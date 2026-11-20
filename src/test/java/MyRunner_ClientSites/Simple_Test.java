@@ -29,7 +29,7 @@ public class Simple_Test {
     }
 
     @Test
-    public void hovers_test() {
+    public void hovers1_test() {
         driver = new ChromeDriver(getChromeOptions());
         driver.get("http://the-internet.herokuapp.com/hovers");
 
@@ -47,7 +47,7 @@ public class Simple_Test {
     }
 
     @Test
-    public void hovers_test2() {
+    public void hovers2_test() {
         driver = new ChromeDriver(getChromeOptions());
         driver.get("http://the-internet.herokuapp.com/hovers");
 
