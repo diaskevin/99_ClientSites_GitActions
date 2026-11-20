@@ -14,7 +14,7 @@ import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class Simple_Tests2 {
+public class Simple2_Tests {
     WebDriver driver;
 
     private ChromeOptions getChromeOptions() {
