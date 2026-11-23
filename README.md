@@ -1,24 +1,31 @@
 # 00_ClientSites_GitActions
 
-The aim of this project is to provide a GitHub Actions runner for running tests in the cloud on public facing urls (See GITHUB_ACTIONS_GUIDE.md):
-    VALIDATE GitHub Actions to run Maven tests
-                    VERIFY Maven dependency resolution via POM (Configure pom.xml to run Selenium JUnit 5 Tests)
-                    VERIFY Maven headless runner (Chromeoptions helper in each Class for Headless Mode)
-                    VERIFY No regional local functionality within tests
-                    VERIFY acceptCookiesIfPresent() helper in each class
-    Convention:
-                GitHub Actions baseline for yaml (maven_Any.yml)
-                    Scheduling: ON 
-                        push:           branches: [ "main" ]
-                        pull_request:   branches: [ "main" ]  
-                Central results reporting (Results & logging & stack trace)
-                                Disabled test require Manual intervention:
-                        Captcha & cookie accept
-                        page element * DOM changes (tree-like structure, content, style, etc)
-        Extensibility across run types:
+The aim of this project is to provide a GitHub Actions runner to provide:
+    Headless running of tests in the cloud
+    for public facing Client Site urls 
+    with Central results reporting (email Results & logging & stack trace)
+(See GITHUB_ACTIONS_GUIDE.md)
+ 
+   
+VALIDATE GitHub Actions to run Maven tests
+    VERIFY Maven dependency resolution via POM (Configure pom.xml to run Selenium JUnit 5 Tests)
+    VERIFY Maven headless runner (Chromeoptions helper in each Class for Headless Mode)
+    VERIFY No regional local functionality within tests for headless running (acceptCookiesIfPresent helper)
+
+Convention:
+    GitHub Actions baseline for yaml (maven_Any.yml)
+        Scheduling: ON 
+            push:           branches: [ "main" ]
+            pull_request:   branches: [ "main" ]  
+        Central results reporting (Results & logging & stack trace)
+    Disabled test require Manual intervention:
+        Captcha & cookie accept
+        page element * DOM changes (tree-like structure, content, style, etc)
+    Extensibility across run types:
         Devices Types (Phtsical, Virtual, Remote using GitHub Actions)
         OS Types (Window & Mac & Linux)
         Browser Types (Local machine) 
+
 
 
 AUTOMATED TESTS
